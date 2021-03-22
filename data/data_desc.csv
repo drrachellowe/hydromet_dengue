@@ -1,0 +1,27 @@
+Variable,Long name,Description,Source
+micro_code,Microregion code,Unique ID number given by IBGE to each microregion (5 digits),Data from https://www.ibge.gov.br/geociencias/downloads-geociencias.html
+micro_name,Microregion name,Name of each microregion,Data from https://www.ibge.gov.br/geociencias/downloads-geociencias.html
+micro_name_ibge,Microregion name (IBGE sources),Name of each microregion (from IBGE sources),Data from https://www.ibge.gov.br/geociencias/downloads-geociencias.html
+meso_code,Mesoregion code,Unique ID number given by IBGE to each mesoregion (4 digits),Data from https://www.ibge.gov.br/geociencias/downloads-geociencias.html
+meso_name,Mesoregion name,Name of each mesoregion,Data from https://www.ibge.gov.br/geociencias/downloads-geociencias.html
+state_code,State code,Unique ID number given by IBGE to each state,Data from https://www.ibge.gov.br/geociencias/downloads-geociencias.html
+state_name,State name,Name of state ,Data from https://www.ibge.gov.br/geociencias/downloads-geociencias.html
+region_code,Region code,Region code,Data from https://www.ibge.gov.br/geociencias/downloads-geociencias.html
+region_name,Region name,Region name,Data from https://www.ibge.gov.br/geociencias/downloads-geociencias.html
+biome_code,Biome code,Biome code ,https://data.globalforestwatch.org/datasets/54ec099791644be4b273d9d8a853d452_4
+biome_name,Biome name,Biome name,https://data.globalforestwatch.org/datasets/54ec099791644be4b273d9d8a853d452_4
+ecozone_code,Ecozone code,"Ecozone code (same as biome apart from Atlantic Rainforest, biome code 6, which has been separated into NE Atlantic rainforest, ecozone code 6, SE Atlantic Rainforest, ecozone code 7, and S Alantic Rainforest, ecozone code 8)",
+ecozone_name,Ecozone name,"Ecozone name (same as biome apart from Atlantic Rainforest, which has been separated into NE Atlantic rainforest, SE Atlantic Rainforest, and S Alantic Rainforest)",
+main_climate,Main climate regime,Most prevalent climate regime in the microregion. Based on Koppen Geiger climate regimes,http://forest-gis.com/2015/10/classificacao-climatica-de-koppen-geiger-em-shapefile.html/
+month,Month,"Calendar month index, 1 = January, É, 12 = December",
+year,Year,Year 2000 - 2019,
+time,Time,Time index starting at 1 for January 2000,
+dengue_cases,Notified dengue cases,"Number of notified dengue cases registered in the notifiable diseases system in Brazil (SINAN) in the microregion of reference, at the month of first symptoms",2001 - 2006: http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinanwin/cnv/denguebr.def; 2007 - 2013: http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/denguebr.def; 2014 - 2019: http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/denguebbr.def
+population,Population,"Estimated population, based on projections calculated using the 2000 and 2010 censuses, and counts carried out in 2007 and 2017",http://tabnet.datasus.gov.br/cgi/deftohtm.exe?ibge/cnv/poptbr.def
+pop_density,Population density,Population density (number of people per km2),population/area_sqkm
+tmax,Maximium temperature,Monthly average daily maximum temperature; gridded values (at a 0.5¡ resolution) averaged across each microregion using the 'exactextratr' R package (¡C),https://crudata.uea.ac.uk/cru/data/hrg/cru_ts_4.04/cruts.2004151855.v4.04/
+tmin,Minimum temperature,Monthly average daily minimum temperature; gridded values (at a 0.5¡ resolution) averaged across each microregion using the 'exactextratr' R package (¡C),https://crudata.uea.ac.uk/cru/data/hrg/cru_ts_4.04/cruts.2004151855.v4.04/
+pdsi,Self-calbrated Palmer's drought severity index,"Self-calibrated Palmer drought severity index for each microregion (a measure of how wet or dry a region is relative to usual conditions). Negative values represent periods of drought, positive values represent wetter periods. Calculated by taking the mean value within each microregion using the exact_extract R package",https://crudata.uea.ac.uk/cru/data/drought/
+urban,Urban population,Percentage of inhabitants living in urban areas according to the 2010 census,http://tabnet.datasus.gov.br/cgi/deftohtm.exe?ibge/cnv/aagbr.def
+water_network,Access to water network,Percentage of inhabitants with access to the piped water network according to the 2010 census,http://tabnet.datasus.gov.br/cgi/deftohtm.exe?ibge/cnv/aagbr.def
+water_shortage,Water shortage,Frequency of reported water shortages per microregion between 2000 - 2016,http://www.snis.gov.br/

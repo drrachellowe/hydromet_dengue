@@ -10,7 +10,7 @@ This study details a methodological framework to estimate the delayed and nonlin
 
 A description of each file and folder is provided below:
 
-  **00_load_packages_data.R:** `R` script to load and process data needed to run DLNMs in INLA models. There is no need to run this script. It is sourced by the follwing scripts. 
+  **00_load_packages_data.R:** `R` script to load and process data needed to run DLNMs in INLA models. There is no need to run this script. It is sourced by the following scripts. 
 
   **01_visual_data.R:** `R` script to explore and visualise dengue, hydrometeorological and socio-economic datasets.
 

@@ -28,8 +28,10 @@ A description of each file and folder is provided below:
   
   **output:** a folder to save the model outputs. This also contains a subfolder named **preds**, with the R script used to generate the cross-validation exercise and associated output files. 
   
-  **hydromet_dengue.Rproj:** An `RStudio` project file, to avoid having to rename directories, etc. 
+  **hydromet_dengue.Rproj:** An `RStudio` project file, to avoid having to set your working directory to the hydromet_dengue folder on your computer. 
 
 Download the repository as a ZIP file using the green button *Clone or download* above, then open the .Rproj file in `RStudio` to begin. 
+
+The analysis was performed using R version 4.0.2 (2020-06-22).
 
 For any issues with the code please contact [Rachel Lowe](https://www.lshtm.ac.uk/aboutus/people/lowe.rachel).

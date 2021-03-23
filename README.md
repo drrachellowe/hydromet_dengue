@@ -2,6 +2,12 @@
 
 Data and `R` code to support Lowe *et al.*, (2021). Combined effects of hydrometeorological hazards and urbanisation on dengue risk in Brazil: a spatiotemporal modelling study. *The Lancet Planetary Health* (in press). 
 
+To cite this repo:
+
+Rachel Lowe (2021). drrachellowe/hydromet_dengue: First release of hydromet_dengue (Version v1.0.0). Zenodo. http://doi.org/10.5281/zenodo.4632205
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4632205.svg)](https://doi.org/10.5281/zenodo.4632205)
+
 --------------------------------------------------------------------------------
 
 This study details a methodological framework to estimate the delayed and nonlinear impact of hydrometeoroloigcal hazards on dengue risk according to different socio-economic factors. The approach builds upon previous studies to model the impact of climate and socio-economic factors in Brazil by coupling distributed lag nonlinear models (DLNM) ([Gasparrini *et al.*, 2013](https://doi.org/10.1002/sim.3940)) with space-time Bayesian hierarchical models ([Lowe *et al.*, 2014](https://doi.org/10.1016/S1473-3099(14)70781-9), [Lowe *et al.*, 2018](https://doi.org/10.1371/journal.pmed.1002613)) fitted using integrated nested Laplace approximations in `R` (R-INLA) ([Lindgren *et al.*, 2015](https://www.jstatsoft.org/article/view/v063i19)). The modelling approach simultaneously describes space-varying, non-linear, and delayed associations between dengue incidence rates and hydrometeorological variables. These exposure-lag-response associations can reveal how hydrometeorological hazards might impact dengue risk in the months leading up to an outbreak. 

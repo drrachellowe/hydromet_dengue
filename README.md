@@ -4,7 +4,7 @@ Data and `R` code to support Lowe *et al.*, (2021). Combined effects of hydromet
 
 To cite this repo:
 
-Rachel Lowe (2021). drrachellowe/hydromet_dengue: First release of hydromet_dengue (Version v1.0.0). Zenodo. http://doi.org/10.5281/zenodo.4632205
+Rachel Lowe. (2021). Data and R code to accompany 'Combined effects of hydrometeorological hazards and urbanisation on dengue risk in Brazil: a spatiotemporal modelling study' (Version v1.0.0). Zenodo. http://doi.org/10.5281/zenodo.4632205
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4632205.svg)](https://doi.org/10.5281/zenodo.4632205)
 

@@ -1,0 +1,4451 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%DocumentNeededResources: font Helvetica
+%%+ font Helvetica-Bold
+%%+ font Helvetica-Oblique
+%%+ font Helvetica-BoldOblique
+%%+ font Symbol
+%%Title: R Graphics Output
+%%Creator: R Software
+%%Pages: (atend)
+%%BoundingBox: 0 0 709 850
+%%EndComments
+%%BeginProlog
+/bp  { gs sRGB gs } def
+% begin .ps.prolog
+/gs  { gsave } bind def
+/gr  { grestore } bind def
+/ep  { showpage gr gr } bind def
+/m   { moveto } bind def
+/l  { rlineto } bind def
+/np  { newpath } bind def
+/cp  { closepath } bind def
+/f   { fill } bind def
+/o   { stroke } bind def
+/c   { newpath 0 360 arc } bind def
+/r   { 4 2 roll moveto 1 copy 3 -1 roll exch 0 exch rlineto 0 rlineto -1 mul 0 exch rlineto closepath } bind def
+/p1  { stroke } bind def
+/p2  { gsave bg fill grestore newpath } bind def
+/p3  { gsave bg fill grestore stroke } bind def
+/p6  { gsave bg eofill grestore newpath } bind def
+/p7  { gsave bg eofill grestore stroke } bind def
+/t   { 5 -2 roll moveto gsave rotate
+       1 index stringwidth pop
+       mul neg 0 rmoveto show grestore } bind def
+/ta  { 4 -2 roll moveto gsave rotate show } bind def
+/tb  { 2 -1 roll 0 rmoveto show } bind def
+/cl  { grestore gsave newpath 3 index 3 index moveto 1 index
+       4 -1 roll lineto  exch 1 index lineto lineto
+       closepath clip newpath } bind def
+/rgb { setrgbcolor } bind def
+/s   { scalefont setfont } bind def
+% end   .ps.prolog
+/sRGB { [ /CIEBasedABC
+          << /DecodeLMN
+               [ { dup 0.03928 le
+                        {12.92321 div}
+                        {0.055 add 1.055 div 2.4 exp }
+                     ifelse
+                 } bind dup dup
+               ]
+             /MatrixLMN [0.412457 0.212673 0.019334
+                         0.357576 0.715152 0.119192
+                         0.180437 0.072175 0.950301]
+             /WhitePoint [0.9505 1.0 1.0890]
+           >>
+         ] setcolorspace } bind def
+/srgb { setcolor } bind def
+%%IncludeResource: font Helvetica
+/Helvetica findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding ISOLatin1Encoding def
+  currentdict
+  end
+/Font1 exch definefont pop
+%%IncludeResource: font Helvetica-Bold
+/Helvetica-Bold findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding ISOLatin1Encoding def
+  currentdict
+  end
+/Font2 exch definefont pop
+%%IncludeResource: font Helvetica-Oblique
+/Helvetica-Oblique findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding ISOLatin1Encoding def
+  currentdict
+  end
+/Font3 exch definefont pop
+%%IncludeResource: font Helvetica-BoldOblique
+/Helvetica-BoldOblique findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding ISOLatin1Encoding def
+  currentdict
+  end
+/Font4 exch definefont pop
+%%IncludeResource: font Symbol
+/Symbol findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  currentdict
+  end
+/Font5 exch definefont pop
+%%EndProlog
+%%Page: 1 1
+bp
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+/bg { 1 1 1 srgb } def
+1 1 1 srgb
+1.07 setlinewidth
+[] 0 setdash
+1 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+0.00 0.00 708.66 850.39 r p3
+0.00 0.00 708.66 850.39 cl
+43.48 543.46 138.09 623.08 cl
+/bg { 1 1 1 srgb } def
+43.48 543.46 94.60 79.62 r p2
+0.9216 0.9216 0.9216 srgb
+0.53 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+43.48 554.70 m
+94.61 0 l
+o
+np
+43.48 573.75 m
+94.61 0 l
+o
+np
+43.48 592.80 m
+94.61 0 l
+o
+np
+43.48 611.85 m
+94.61 0 l
+o
+np
+62.12 543.46 m
+0 79.62 l
+o
+np
+83.62 543.46 m
+0 79.62 l
+o
+np
+105.12 543.46 m
+0 79.62 l
+o
+np
+126.62 543.46 m
+0 79.62 l
+o
+np
+137.37 543.46 m
+0 79.62 l
+o
+1.07 setlinewidth
+[] 0 setdash
+np
+43.48 545.18 m
+94.61 0 l
+o
+np
+43.48 564.23 m
+94.61 0 l
+o
+np
+43.48 583.27 m
+94.61 0 l
+o
+np
+43.48 602.32 m
+94.61 0 l
+o
+np
+43.48 621.37 m
+94.61 0 l
+o
+np
+51.37 543.46 m
+0 79.62 l
+o
+np
+72.87 543.46 m
+0 79.62 l
+o
+np
+94.37 543.46 m
+0 79.62 l
+o
+np
+115.87 543.46 m
+0 79.62 l
+o
+gsave
+47.78 547.08 translate
+86.00 72.38 scale
+8 dict dup begin
+  /ImageType 1 def
+  /Width 12 def
+  /Height 19 def
+  /BitsPerComponent 8 def
+  /Decode [0 1 0 1 0 1] def
+  /DataSource currentfile /ASCIIHexDecode filter def
+  /ImageMatrix [12 0 0 -19 0 19] def
+end
+image
+cf1358d81c6be2257fe4499adf63aed285bfd089c1d480bdd088c1e72989be0c50bd0c50e4479ae351a0e254a3e062aee05fabd67dbbd975b7d877b8e54699d81c6ac71054d91c6be061acdb6fb4da72b6cf89c1ca98c9d0aad2d1add4d2b2d7d4b9dacc8ec4db70b5e259a7e352a1e32581e15da9dc6fb4cb9acacfa6d0cfa9d2d3b4d8d5badbd3b4d8cea6d0ca97c9b4084dd31760e1247ddf64afd975b7d285bfcea5cfd3b5d8d1aed5cea6d0cea3cfdc6eb4dc6db4d481bddd6bb3e352a1e4489ae54296e7308db70a4e720027700025820032a30347e0237be72d8ce44a9bd480bccb99cacc9ecccea5d0e1d4e8ddcce4dcc9e2cb99cacb91c6e44b9ce34e9edb71b5ce8cc3cb9acad0acd3d2b2d6d5bbdbd3b6d8cb90c5e15daae6399167001f870037a30347d2165fe353a2d088c1cfa9d2d0aad2d3b7d9cfa6d0d0acd3e2257f90003d6b002278002ba20347cf1358dd2073df2278e54497e62887d71b68a002467e002f9c01447400297f0030cc1155de2176e257a4d480bcd088c0cb92c6dc6eb4e62888c71054ca96c8d77ab9da72b5de69b2d974b7cb91c5cda0cdd1afd5c995c7d186bfe44b9ce2257fcc9eccce8bc2cd8ec4c995c7d7bfdde8e3f0f2eef6f0ecf5f2eef6e6dfeecda2cecea3cfca98c9d3b4d7d8c0deddcbe3e8e2efe7e0efede8f3f2eef6ede8f3eae5f1d5bbdbd2b3d7c71054e6338edc6eb4cfa9d2dfcfe6e1d3e8e6dfeeede8f3f7f4f9ebe6f2d9c2dfe15ca9ca92c6d67dbbd0a9d2d7bfddcc9fcdcfa7d1d0acd3d1afd5cd8dc3e53e94b0074bc20e52e15da9e15ba8da74b6ce8cc3cfa7d1d1aed4ddcce4e9e3f0e8e2efd5bbdbcfa7d1cea3cfca93c6da73b6e44d9ecb9acad2b1d6d7bfdddbc7e2e2d6e9e0d1e7dcc9e2ce8dc3d089c1c60f53e258a5d480bdca92c6d1b0d5d3b4d7e9e3f0e7e1efe7e1efd8c1dedd6ab2e063ae>
+grestore
+0.2000 0.2000 0.2000 srgb
+1 setlinecap
+43.48 543.46 94.60 79.62 r p1
+0.00 0.00 708.66 850.39 cl
+143.57 748.08 238.17 827.71 cl
+/bg { 1 1 1 srgb } def
+143.57 748.08 94.60 79.62 r p2
+0.9216 0.9216 0.9216 srgb
+0.53 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+143.57 759.32 m
+94.60 0 l
+o
+np
+143.57 778.37 m
+94.60 0 l
+o
+np
+143.57 797.42 m
+94.60 0 l
+o
+np
+143.57 816.47 m
+94.60 0 l
+o
+np
+162.20 748.08 m
+0 79.63 l
+o
+np
+183.70 748.08 m
+0 79.63 l
+o
+np
+205.20 748.08 m
+0 79.63 l
+o
+np
+226.70 748.08 m
+0 79.63 l
+o
+np
+237.45 748.08 m
+0 79.63 l
+o
+1.07 setlinewidth
+[] 0 setdash
+np
+143.57 749.80 m
+94.60 0 l
+o
+np
+143.57 768.85 m
+94.60 0 l
+o
+np
+143.57 787.89 m
+94.60 0 l
+o
+np
+143.57 806.94 m
+94.60 0 l
+o
+np
+143.57 825.99 m
+94.60 0 l
+o
+np
+151.45 748.08 m
+0 79.63 l
+o
+np
+172.95 748.08 m
+0 79.63 l
+o
+np
+194.45 748.08 m
+0 79.63 l
+o
+np
+215.95 748.08 m
+0 79.63 l
+o
+gsave
+147.87 751.70 translate
+86.00 72.38 scale
+8 dict dup begin
+  /ImageType 1 def
+  /Width 12 def
+  /Height 19 def
+  /BitsPerComponent 8 def
+  /Decode [0 1 0 1 0 1] def
+  /DataSource currentfile /ASCIIHexDecode filter def
+  /ImageMatrix [12 0 0 -19 0 19] def
+end
+image
+d3b7d9d5badbcc9fcdcea3ceca96c8cc9ecccc9dcccb99cadd6bb3e351a0e62889e062adf4f1f7f7f4f9f2eef6f4f1f7f2eef6e6deeee2d6e9d4b7d9e6deeed8c1dee2d6e9e2d6e9e0d3e8e0d3e8d1aed4cfa8d1cc9ecccfa7d1d0a9d2d7c0dde0d3e8e3d8eae6dfeee8e2efdecde5dcc9e2cea4cfe3d8eae6deeee0d2e7dac5e0d0aad2dbc7e1ddcbe3e3d8eae4dbecd382becda0cdcc8fc4d67bbad186bfdc6db3de69b2e15eabd974b7cfa7d1ddcde4d3b4d7d088c1cc9eccca93c6cb90c5d57ebbd975b7db71b5db71b5db6fb4d186c0c994c7d383becb9acacb9ccbcb9bcbcb9ccbdb71b5d976b7d57fbccf8ac2d77ab9d187c0c994c7cea4cfde68b1d67dbbe44799e05fabe54799e258a5e062ade4499bd877b8c993c7cb91c5cb9bcbdf63afdc6eb4e15eaada73b6d67bbadc6cb3de68b1db71b5cd8ec3cf89c1cb9acad2b3d7de69b2e42683d81c6acd1256b70a4ea00246ce1257d61a66e63690d67cbad383bedc6eb4d41862d3175fd91c6be53f95e258a5d779b9e060ace15ba8dd69b2d284bed879b9de69b1d878b9e353a2e63690dc2073d41862de2176c40f53db1e6fe2247ee53e94e72e8ce6328ee060abc994c7d1aed4ca97c8d285bfcf89c1e061add57ebbd186bfcc8fc4d47fbcd57fbcd1afd5e2d7eaede8f3d9c2dfd382bdd67dbbdd6cb3df65b0db71b5de68b1e062addf64afd879b9e15eaae4499be34f9ee62888c91054e32681da72b6d1add4d4b9dacb9acad2b2d6ce8cc3cb9bcacfa9d2d8c0ded0add4d8c0ded1afd5cb9bcad284bed186c0d975b7d77abae060acde69b2cb9ccbdfd0e6cc8fc4e062adca10549b0144a50448d71a67e54397df66b0e1247ee53f94db6fb4d878b8d481bdcb90c5d185bfca98c9cb9acade69b1d975b7d879b9c10d51df2278e25aa7da72b6e063aede69b2e351a0e72e8cde2176cf1358d81c6ada1d6d>
+grestore
+0.2000 0.2000 0.2000 srgb
+1 setlinecap
+143.57 748.08 94.60 79.62 r p1
+0.00 0.00 708.66 850.39 cl
+143.57 645.77 238.17 725.39 cl
+/bg { 1 1 1 srgb } def
+143.57 645.77 94.60 79.62 r p2
+0.9216 0.9216 0.9216 srgb
+0.53 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+143.57 657.01 m
+94.60 0 l
+o
+np
+143.57 676.06 m
+94.60 0 l
+o
+np
+143.57 695.11 m
+94.60 0 l
+o
+np
+143.57 714.16 m
+94.60 0 l
+o
+np
+162.20 645.77 m
+0 79.62 l
+o
+np
+183.70 645.77 m
+0 79.62 l
+o
+np
+205.20 645.77 m
+0 79.62 l
+o
+np
+226.70 645.77 m
+0 79.62 l
+o
+np
+237.45 645.77 m
+0 79.62 l
+o
+1.07 setlinewidth
+[] 0 setdash
+np
+143.57 647.49 m
+94.60 0 l
+o
+np
+143.57 666.54 m
+94.60 0 l
+o
+np
+143.57 685.58 m
+94.60 0 l
+o
+np
+143.57 704.63 m
+94.60 0 l
+o
+np
+143.57 723.68 m
+94.60 0 l
+o
+np
+151.45 645.77 m
+0 79.62 l
+o
+np
+172.95 645.77 m
+0 79.62 l
+o
+np
+194.45 645.77 m
+0 79.62 l
+o
+np
+215.95 645.77 m
+0 79.62 l
+o
+gsave
+147.87 649.39 translate
+86.00 72.38 scale
+8 dict dup begin
+  /ImageType 1 def
+  /Width 12 def
+  /Height 19 def
+  /BitsPerComponent 8 def
+  /Decode [0 1 0 1 0 1] def
+  /DataSource currentfile /ASCIIHexDecode filter def
+  /ImageMatrix [12 0 0 -19 0 19] def
+end
+image
+d4b7d9d3b7d9d8c1ded8c2dfdecee5e1d3e8e3d8eae7e0efdbc8e2c994c7da73b6dc6fb4d1afd5d0aad2cfa6d0cfa9d2d4b7d9d5bbdbd4badad8c0dedccae3dfcfe6e0d1e7e0d2e7cb90c5cb91c5cd8ec4c994c7d0acd3d4b8d9d3b5d8d2b1d6d0abd3dbc7e2d9c3dfd8c2dfca93c6d876b8df64afe256a4d877b8d187c0cc9eccd4b7d9d6beddd6bcdcd3b5d8d3b5d8ca99c9ca97c8ce8cc3c994c7cda0cdd1aed4d2b3d7d5bbdbd5bbdbd7bedddac5e0cda2cedd6ab2d974b7dd6bb2d779b9cd8ec4cea4cfd1afd5d2b2d6d3b4d7d2b2d7cda2cecc9fcde72989e22580e32581e63790e15da9d975b7cd8dc3cda1ced0abd3cfa8d1cfa6d0ca98c9da73b6df63afca98c9d2b1d6d2b3d7d0abd3cea5d0d3b5d8d2b2d7cfa7d1ca97c8d481bdb6094e88003791003ed61a66e54095df66b0cf8ac2cb90c5cda0cdcda1cecda0cdd480bcce8bc2cb9bcbcb9ccbcda1ceca96c8d284bfd67bbad087c0ca98c9c994c7dd6ab2e255a3cb99cad1b0d5d3b5d8e2d6e9decde4e5ddede0d3e7e1d4e8e6deeee0d3e7d3b5d8d0acd3e15eaae44d9de351a0e15ca8d187c0d9c4e0d9c2dfe1d5e9e7e1efd9c3dfcfa8d1ca98c9e9e4f0d8c1ded4b8d9d3b5d8d8c1ded3b7d9d4badbdccae3d8c2dfd3b6d9cc9dcccda1cee1d4e8dfd0e6d8c2dfe1d3e8e3d9ebe9e3f0eae4f1e9e3f0ebe6f1ece7f2ece7f2ece6f2e0d2e7dac6e1d3b4d7d1aed4d2b3d7d9c4e0e4daebeae5f1f2eef6f5f2f8f0ecf5efebf4d7bfddd3b7d9d6bddcdac4e0d8c2dfe4dbece2d5e9e7e1efefeaf4ede8f3e8e2f0eae4f1cb99cacf8ac1db70b5d779b9da73b6c993c7d0abd3decfe5e7e1efe7e1efe5ddeddac6e1d5bcdbd284becd8dc3cea4cfd7bfdddbc8e2dbc8e2d6bcdcdfd0e6e2d6e9d2b3d7dccae3c00d51c50f53e1237ce25aa7da74b6cb9acad6bddce3d9ebe4dbeceae4f1e6dfeecb9aca>
+grestore
+0.2000 0.2000 0.2000 srgb
+1 setlinecap
+143.57 645.77 94.60 79.62 r p1
+0.00 0.00 708.66 850.39 cl
+143.57 543.46 238.17 623.08 cl
+/bg { 1 1 1 srgb } def
+143.57 543.46 94.60 79.62 r p2
+0.9216 0.9216 0.9216 srgb
+0.53 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+143.57 554.70 m
+94.60 0 l
+o
+np
+143.57 573.75 m
+94.60 0 l
+o
+np
+143.57 592.80 m
+94.60 0 l
+o
+np
+143.57 611.85 m
+94.60 0 l
+o
+np
+162.20 543.46 m
+0 79.62 l
+o
+np
+183.70 543.46 m
+0 79.62 l
+o
+np
+205.20 543.46 m
+0 79.62 l
+o
+np
+226.70 543.46 m
+0 79.62 l
+o
+np
+237.45 543.46 m
+0 79.62 l
+o
+1.07 setlinewidth
+[] 0 setdash
+np
+143.57 545.18 m
+94.60 0 l
+o
+np
+143.57 564.23 m
+94.60 0 l
+o
+np
+143.57 583.27 m
+94.60 0 l
+o
+np
+143.57 602.32 m
+94.60 0 l
+o
+np
+143.57 621.37 m
+94.60 0 l
+o
+np
+151.45 543.46 m
+0 79.62 l
+o
+np
+172.95 543.46 m
+0 79.62 l
+o
+np
+194.45 543.46 m
+0 79.62 l
+o
+np
+215.95 543.46 m
+0 79.62 l
+o
+gsave
+147.87 547.08 translate
+86.00 72.38 scale
+8 dict dup begin
+  /ImageType 1 def
+  /Width 12 def
+  /Height 19 def
+  /BitsPerComponent 8 def
+  /Decode [0 1 0 1 0 1] def
+  /DataSource currentfile /ASCIIHexDecode filter def
+  /ImageMatrix [12 0 0 -19 0 19] def
+end
+image
+e2d6e9ddcce4dbc8e2d4b8d9dac5e0d3b5d8cfa9d2dbc8e2e5ddedd7bfddcea5cfca97c8d2b3d7d6bddcdbc8e2d9c4e0dac6e1e7e1efe6dfeee7e1efe9e3f0e1d5e9e5deede6e0eedf65b0dc6eb4d57fbccea6d0d4b7d9d9c4e0dfd1e7decde5ddcbe4e2d6e9d4badacea4cfdf2177da1d6de62887e258a5cb91c5d2b1d6d3b6d8e7e1efdfcfe6dbc7e1cb91c5dd69b2cda1cdcb9acace8cc3ce8cc3cb9bcbd0acd3d8c1dedbc8e2d6bedccea4cfc996c8da73b6ca98c9cc8fc4cc90c5cc9fcccc9eccd0abd3d6bddcd8c2dfdac5e0d0abd3d284becb9acad91c6bd81c6be2247ee060acd481bdcda1ced2b0d6d8c0ded7beddd0aad2d57ebcd383bed088c1d383bed878b8d284bed285bfd284beca93c6cb9acad2b3d7cb9ccbd382bddc6fb4e255a3e061ade257a5dc6cb3cb9bcbddcce4e2d7ead8c2dfd4b8dad5bbdbe3d8ebd3b4d8870036aa0549dc1f72e4489ad879b9ca96c8d1b0d5d3b5d8d4b8dacb9acae354a2e02279e44c9de62888d61a66e54297e352a1dc6fb4d57ebbd67dbbd67bbae72a8ab5094da20347e2257fe6348fe72989e63e94d088c1d4b9dae6e0eee8e2f0e8e2f0e0d3e8cea5d0dc6cb3d383bed57ebbd185bfca98c9cea4cfd1aed5d4b9dad7bfddcfa9d2cd8ec4df65b0e63991db1e6fe42682da72b6cfa7d1d7c0dee2d6e9eae5f1ebe5f1ece7f2dbc8e2d3b4d8cf8ac2db1e6fe52785e6338ed878b8cfa6d0d3b5d8d6bddcdcc9e3e5dcecdbc8e2cb91c5e256a4d877b8d382bdce8cc3d1b0d5d9c4e0decee5e3d9ebe2d6e9dfd1e7d0acd3e254a3e7318de34e9ee256a4df66b0ce8cc3cda0cdcea5d0d2b0d5dbc7e1decfe5d5bbdbcd8dc3d186c0cc8fc4d285bfce8cc3d2b2d6d5bbdbe5dcece5ddedeee9f3e2d7ead5bcdbd67cbbcf8ac2e351a0d481bdca96c8d2b3d7cfa8d1d9c3dfe3d9ebe7e1efece7f2e0d3e8d0aad2cea5d0>
+grestore
+0.2000 0.2000 0.2000 srgb
+1 setlinecap
+143.57 543.46 94.60 79.62 r p1
+0.00 0.00 708.66 850.39 cl
+143.57 441.15 238.17 520.77 cl
+/bg { 1 1 1 srgb } def
+143.57 441.15 94.60 79.62 r p2
+0.9216 0.9216 0.9216 srgb
+0.53 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+143.57 452.39 m
+94.60 0 l
+o
+np
+143.57 471.44 m
+94.60 0 l
+o
+np
+143.57 490.49 m
+94.60 0 l
+o
+np
+143.57 509.54 m
+94.60 0 l
+o
+np
+162.20 441.15 m
+0 79.62 l
+o
+np
+183.70 441.15 m
+0 79.62 l
+o
+np
+205.20 441.15 m
+0 79.62 l
+o
+np
+226.70 441.15 m
+0 79.62 l
+o
+np
+237.45 441.15 m
+0 79.62 l
+o
+1.07 setlinewidth
+[] 0 setdash
+np
+143.57 442.87 m
+94.60 0 l
+o
+np
+143.57 461.91 m
+94.60 0 l
+o
+np
+143.57 480.96 m
+94.60 0 l
+o
+np
+143.57 500.01 m
+94.60 0 l
+o
+np
+143.57 519.06 m
+94.60 0 l
+o
+np
+151.45 441.15 m
+0 79.62 l
+o
+np
+172.95 441.15 m
+0 79.62 l
+o
+np
+194.45 441.15 m
+0 79.62 l
+o
+np
+215.95 441.15 m
+0 79.62 l
+o
+gsave
+147.87 444.77 translate
+86.00 72.38 scale
+8 dict dup begin
+  /ImageType 1 def
+  /Width 12 def
+  /Height 19 def
+  /BitsPerComponent 8 def
+  /Decode [0 1 0 1 0 1] def
+  /DataSource currentfile /ASCIIHexDecode filter def
+  /ImageMatrix [12 0 0 -19 0 19] def
+end
+image
+d975b7da73b6df63aee353a2e54598df64afcb90c5cda2ced0aad2cda0cdd877b8e258a5e258a5e15ca9e063aed975b7d284becc9dccd1afd5d3b7d9d6beddd7c0decda1cdcc8ec4e05fabe255a3e54497e15daadb71b5cf8ac2cda1cdcea4cfd2b1d6cfa8d1cc9ccbd383becd1256cd1256e22580e15da9cf8ac2cea3cfd1afd5cfa8d1cea4cfcc9ccbd382bde15ca8d975b7df65b0e53f95e32681df2278e54095df65b0de68b1d877b8dc6cb3e54196e0227adf65b0e05fabe061acdd6bb2d481bdca97c9cfa6d0d0acd3cc9fcdcda2cecb9acacd8ec4b7094ebf0d51c60f53d81c6ae6338edd6bb2d283beca97c9cb99cacb90c5d976b7db70b5e54699e1247dd2165dcf1358d3165fe52786e54498e063aed285bfde69b2e54598e52886e15aa7da73b6d877b8ca92c6cda2cecfa9d2d1afd5d2b3d7d5bbdbcda2cecc9ccbd1add4960042b70a4ed2165ee7308dde67b1d088c1cb99c9cea5d0cd9fcdcc9fccd975b7e62888dc6fb4e354a2db1e70af074bb5094de1247ce53f94e352a1e352a1e42784b90a4fb0074be44b9ce44e9ee352a1de67b1cc9ccbd6bddce7e1efdfd0e6dac6e1d9c4e0d0acd4cf8ac2df2278dd2074dd2073e72f8de352a1d975b7c995c8cfa9d2d4b9dacc9dccd877b8e063aee061ade05fabe44b9cde67b1d67dbbcfa7d1d3b7d9d1afd5d7bfddca96c8e63b92e54196d383bee062ade256a4e15daad879b9c994c7d4badae0d1e7ddcce4cfa6d0dd6ab2d879b9d187c0cb90c5ca96c8cea4cfd4b9dadfcfe6eae4f1efebf4f0ecf5d5badbcc9fccca98c9e32580db1e70e34f9fcd8dc3cfa9d2d9c3dfdfd0e6e5ddede1d3e8d3b5d8da73b6dd69b2e2257fe42683e54498d77ab9ca98c9d1aed4dccae3e3d8eadecee5cea4cfd382bde15eaad2b0d6d2b3d7d1aed4cfa7d1cea6d0d8c2dfe1d4e8e0d2e7e1d3e8cc9dccd77abacd8ec4>
+grestore
+0.2000 0.2000 0.2000 srgb
+1 setlinecap
+143.57 441.15 94.60 79.62 r p1
+0.00 0.00 708.66 850.39 cl
+143.57 338.84 238.17 418.46 cl
+/bg { 1 1 1 srgb } def
+143.57 338.84 94.60 79.62 r p2
+0.9216 0.9216 0.9216 srgb
+0.53 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+143.57 350.08 m
+94.60 0 l
+o
+np
+143.57 369.13 m
+94.60 0 l
+o
+np
+143.57 388.18 m
+94.60 0 l
+o
+np
+143.57 407.23 m
+94.60 0 l
+o
+np
+162.20 338.84 m
+0 79.62 l
+o
+np
+183.70 338.84 m
+0 79.62 l
+o
+np
+205.20 338.84 m
+0 79.62 l
+o
+np
+226.70 338.84 m
+0 79.62 l
+o
+np
+237.45 338.84 m
+0 79.62 l
+o
+1.07 setlinewidth
+[] 0 setdash
+np
+143.57 340.56 m
+94.60 0 l
+o
+np
+143.57 359.60 m
+94.60 0 l
+o
+np
+143.57 378.65 m
+94.60 0 l
+o
+np
+143.57 397.70 m
+94.60 0 l
+o
+np
+143.57 416.75 m
+94.60 0 l
+o
+np
+151.45 338.84 m
+0 79.62 l
+o
+np
+172.95 338.84 m
+0 79.62 l
+o
+np
+194.45 338.84 m
+0 79.62 l
+o
+np
+215.95 338.84 m
+0 79.62 l
+o
+gsave
+147.87 342.46 translate
+86.00 72.38 scale
+8 dict dup begin
+  /ImageType 1 def
+  /Width 12 def
+  /Height 19 def
+  /BitsPerComponent 8 def
+  /Decode [0 1 0 1 0 1] def
+  /DataSource currentfile /ASCIIHexDecode filter def
+  /ImageMatrix [12 0 0 -19 0 19] def
+end
+image
+dc1f72b5094d880037940040c60f53e1247ddf66b1ce8bc2cb9ccbc995c8dc6db3e257a5d185bfcb99cac994c7cb99cacc9ccbd1b0d5d8c0dedfd1e7ddcbe3d7bfdde05fabe52887cc9dcccc9dcccda0cdd0abd3d3b4d8d9c3dfdfcfe6dccae3d6bedcd2b1d6ca98c9ca98c986003691003eae074bd41861da72b6d1afd5dbc8e2d8c0ded8c2dfd6bcdcd4b8dade69b2e54296e0227ace1357c30e52da1d6ee34e9ed187c0cd8ec4cf8ac2dd6ab2dd2075bc0c50d383bed779b9d284bfd284bfca92c6d2b2d6d4b8dad9c3dfd9c4e0d1add4d2b1d6cb9ccb700026750029870037af074bda1e6fdf65b0cf8ac2d0acd3d3b5d8d2b3d7cb9acadc6db3d67dbbd878b9e061ade54598df63afd187c0cfa7d1d4b7d9cea5d0cc9dcce257a4e0237ae15ba8e354a2e54498e54598db6fb4d2b0d5dfd0e6decee5ddcbe4d7c0dedccae3d4b8d9980043820033810032a00246d61a66db6fb4ca93c6cea5d0cc9fcdcc9eccd383bee350a0d7bfddda73b6de2177da1e6ee72a8acd8ec4d0abd3d4b9dad4b9dacb9bcbe54397db1f71d2b4d7d9c3dfcfa6d0d2b1d6e6deede8e3f0f0ecf5eeeaf4eee9f3ebe5f1e3d9ebe4daeb7b002e6b002279002cb2084ce72c8bcc9dcbdbc7e2e8e2efece7f2dbc8e2d1add4e257a5d0acd3d877b8dc2073d41861e54297cc8fc4d6bddce3d8eae2d6e9d5bbdbdf64afe63690efebf4e0d1e7d0acd3cfa9d2d8c2dfddcbe3ede8f3f0ebf4f0ecf5f2eef6f1edf6ebe5f1d5bcdcdfcfe6e6deede3d7eae2d6e9f0ecf5f3eff6f3f0f7f5f1f8f5f1f8f3f0f7eee9f3cea3cfd283bedd6bb3d974b7cfa6d0dccae3ebe5f1f3eff6f5f1f8f0ecf5ebe5f1e5dceccb1155ce1257df2279e15ca9ca97c9d9c4e0e9e3f0e3d8eaebe5f1eeeaf4e2d5e9d0acd3c994c7da74b6e63991d61a65dd2075cb9acadecde5e2d7eae3d8ead5bbdbcd8dc3e062ad>
+grestore
+0.2000 0.2000 0.2000 srgb
+1 setlinecap
+143.57 338.84 94.60 79.62 r p1
+0.00 0.00 708.66 850.39 cl
+243.65 748.08 338.25 827.71 cl
+/bg { 1 1 1 srgb } def
+243.65 748.08 94.60 79.62 r p2
+0.9216 0.9216 0.9216 srgb
+0.53 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+243.65 759.32 m
+94.60 0 l
+o
+np
+243.65 778.37 m
+94.60 0 l
+o
+np
+243.65 797.42 m
+94.60 0 l
+o
+np
+243.65 816.47 m
+94.60 0 l
+o
+np
+262.28 748.08 m
+0 79.63 l
+o
+np
+283.78 748.08 m
+0 79.63 l
+o
+np
+305.28 748.08 m
+0 79.63 l
+o
+np
+326.78 748.08 m
+0 79.63 l
+o
+np
+337.53 748.08 m
+0 79.63 l
+o
+1.07 setlinewidth
+[] 0 setdash
+np
+243.65 749.80 m
+94.60 0 l
+o
+np
+243.65 768.85 m
+94.60 0 l
+o
+np
+243.65 787.89 m
+94.60 0 l
+o
+np
+243.65 806.94 m
+94.60 0 l
+o
+np
+243.65 825.99 m
+94.60 0 l
+o
+np
+251.53 748.08 m
+0 79.63 l
+o
+np
+273.03 748.08 m
+0 79.63 l
+o
+np
+294.53 748.08 m
+0 79.63 l
+o
+np
+316.03 748.08 m
+0 79.63 l
+o
+gsave
+247.95 751.70 translate
+86.00 72.38 scale
+8 dict dup begin
+  /ImageType 1 def
+  /Width 12 def
+  /Height 19 def
+  /BitsPerComponent 8 def
+  /Decode [0 1 0 1 0 1] def
+  /DataSource currentfile /ASCIIHexDecode filter def
+  /ImageMatrix [12 0 0 -19 0 19] def
+end
+image
+e2d7eae1d3e8d5bcdbdccae3e2d7eae5ddede5ddede6dfeee9e3f0e3d9ebe5ddeddecde5cea6d0cb9bcbce8cc3d187c0cfa8d1d6beddd5bcdbd0acd3d8c1ded1add4dac5e0ddcbe4d57fbcd878b8d779b9c994c7c993c7d3b6d8ddcbe4e0d2e7decde4dbc8e2ddcbe4dac4e0d088c0e15eabe44c9de15eaad878b9cc9dcccda1ceca93c6cc90c5cda0cdd3b7d9d9c4e0e4489ae6328ee1237ce54598e15ca8d976b7d382bed382becf8bc2c995c7c994c7c995c8d8c1ded9c2dfca92c6e061ade63c93d77ab9ca97c9cfa9d2d480bde54095e15eaacb9bcae15eaade68b1e4479ae44b9cd383bed2b0d6d3b6d8cfa7d1d5bcdbd5bcdbd8c0dee3d8ebd3b6d8d0abd3d3b6d8d1afd5cea5d0cea5d0cb91c5e15ca9e34f9fe15eaadc6cb3cb9bcbe42784e0237be72d8ce353a2d975b7d088c0d2b1d6cc9ecccb9ccbcda1cee7e0eecc9fcddb71b5e4489ade68b1dd6ab2e256a4e060ace256a4e6348fe44a9be34f9fdd6ab2cd8dc3e53e94e54799e54296db70b5d382becd8ec3cea3cfd0acd3d2b3d7d5bcdbdfcfe6d3b6d8d67dbbd087c0d383bed382bdcb9acad3b4d7ddcde4dac5e0cea4cfdf65b0e259a6cc90c5e72a8ae22580d51964de2176e7298ada72b6cb9bcbcb9acac994c7cea6d0cda1cdd283bee63d93e54598e352a1d480bdd088c1cc9fcccfa8d1cda1cecda0cdd088c1cf8bc2d481bdde69b2e63c93e32682e53f94e4499bdb70b5d975b7db70b5d089c1cea5d0ca96c8cea5d0e15daae256a4e72989e44a9ce15ba7e256a4e257a5e15da9e258a5db70b5d383beda72b6cb9bcbcf8ac1d57ebbd285bfe060ace44b9cdc1f72c91054d2165fe352a1dc6db4c995c8d1afd5e15eabdd6ab2cc90c5d1afd5d0acd3cc9dccd67cbad187c0d2b1d6d2b4d7d9c3dfe7e1efdac5e1d185bfdf65b0df2278e62888e32682d61a66e52785e352a1d088c0e2d7ea>
+grestore
+0.2000 0.2000 0.2000 srgb
+1 setlinecap
+243.65 748.08 94.60 79.62 r p1
+0.00 0.00 708.66 850.39 cl
+243.65 645.77 338.25 725.39 cl
+/bg { 1 1 1 srgb } def
+243.65 645.77 94.60 79.62 r p2
+0.9216 0.9216 0.9216 srgb
+0.53 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+243.65 657.01 m
+94.60 0 l
+o
+np
+243.65 676.06 m
+94.60 0 l
+o
+np
+243.65 695.11 m
+94.60 0 l
+o
+np
+243.65 714.16 m
+94.60 0 l
+o
+np
+262.28 645.77 m
+0 79.62 l
+o
+np
+283.78 645.77 m
+0 79.62 l
+o
+np
+305.28 645.77 m
+0 79.62 l
+o
+np
+326.78 645.77 m
+0 79.62 l
+o
+np
+337.53 645.77 m
+0 79.62 l
+o
+1.07 setlinewidth
+[] 0 setdash
+np
+243.65 647.49 m
+94.60 0 l
+o
+np
+243.65 666.54 m
+94.60 0 l
+o
+np
+243.65 685.58 m
+94.60 0 l
+o
+np
+243.65 704.63 m
+94.60 0 l
+o
+np
+243.65 723.68 m
+94.60 0 l
+o
+np
+251.53 645.77 m
+0 79.62 l
+o
+np
+273.03 645.77 m
+0 79.62 l
+o
+np
+294.53 645.77 m
+0 79.62 l
+o
+np
+316.03 645.77 m
+0 79.62 l
+o
+gsave
+247.95 649.39 translate
+86.00 72.38 scale
+8 dict dup begin
+  /ImageType 1 def
+  /Width 12 def
+  /Height 19 def
+  /BitsPerComponent 8 def
+  /Decode [0 1 0 1 0 1] def
+  /DataSource currentfile /ASCIIHexDecode filter def
+  /ImageMatrix [12 0 0 -19 0 19] def
+end
+image
+d0abd3cda1cdcda0cdcea4cfcfa6d0d7bfdddfd1e6ddcce4dbc8e2dcc9e2d6bedcddcce4dbc8e2d3b6d8cda2ced0a9d2d3b5d8decee5e6deedddcde4e7e0efe9e3f0e1d5e9ddcce4d976b7d77ab9d284bed1add4d4b7d9ddcbe3dfd0e6decee5e3d8eae0d2e7e0d2e7dfd1e6d284bfdc6fb4d77ab9d57fbcca97c9d2b3d7d4b9dad7bedddcc9e2dac5e0d9c4e0d2b3d7d5bcdccfa7d1cd8dc3c995c7cb9acad0acd3d3b4d7d1add4d2b2d6d3b7d9d2b0d6cea5d0d0abd3cfa8d1cda2ced0abd3d2b0d6dccae3e1d4e8e1d4e8dfcfe6d9c2dfddcce4dccae3d67dbbda74b7d976b8d284becda1cedfd0e6e8e2f0e8e2f0e8e3f0e5deedd9c3dfddcbe4df65b0e15ba7e15ba8d77ab9ca92c6cda2cecda1cecb9bcad0aad2d3b5d8cc9ecccea4cfe34f9fe54598e257a4d77ab9cb9bcbd4b8d9d7c0ded4b8dad2b4d7d3b4d8d2b3d7d1afd5cea3cfc995c8d877b8d089c1cd8dc3c995c8cb9ccbcf8bc2ca92c6ce8bc2da72b6d976b7c994c7d480bdd976b8cc8fc4cea4cfd4b9dadfcfe6e2d6e9e4dbecd9c4e0d4b8d9dac5e1e54397e354a3e15eaadd6cb3cb9ccbd2b0d5dcc9e2e4daebe0d2e7d6bedcd4b9dacc9dcccb92c6d57ebbdf66b1da73b6c995c8d1add4d1afd5d1add4cfa7d1cc8fc4d878b9dc6fb4da73b6ce8bc2cd8ec4cc9ecccfa6d0d6bddce3d8eae2d7eae2d7eae2d7eadbc8e2d3b5d8c994c7d67dbbd67dbbcc9dcccea5d0d3b6d8d9c3dfd5badbd3b6d8d1add4cda2cecfa6d0d976b7d087c0ca97c8d3b4d7d6bddcdfd0e6e0d2e7ddcbe4dfd1e7dccae3d8c2dfd3b4d7dc6cb3de67b1d67bbacc9ccbd2b3d7d4b9dad7c0ded5bbdbd5badbcea4cfcc9dccc994c7df65b0e15ca8e258a6d285bfcfa6d0d8c1deddcbe4dcc9e2d5bbdbd3b5d8cfa7d1cc9ccbe15ca9e54296e63e94e15da9d186c0d1add4dbc6e1e0d2e7d7c0ded0acd3ca97c9cea3cf>
+grestore
+0.2000 0.2000 0.2000 srgb
+1 setlinecap
+243.65 645.77 94.60 79.62 r p1
+0.00 0.00 708.66 850.39 cl
+243.65 543.46 338.25 623.08 cl
+/bg { 1 1 1 srgb } def
+243.65 543.46 94.60 79.62 r p2
+0.9216 0.9216 0.9216 srgb
+0.53 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+243.65 554.70 m
+94.60 0 l
+o
+np
+243.65 573.75 m
+94.60 0 l
+o
+np
+243.65 592.80 m
+94.60 0 l
+o
+np
+243.65 611.85 m
+94.60 0 l
+o
+np
+262.28 543.46 m
+0 79.62 l
+o
+np
+283.78 543.46 m
+0 79.62 l
+o
+np
+305.28 543.46 m
+0 79.62 l
+o
+np
+326.78 543.46 m
+0 79.62 l
+o
+np
+337.53 543.46 m
+0 79.62 l
+o
+1.07 setlinewidth
+[] 0 setdash
+np
+243.65 545.18 m
+94.60 0 l
+o
+np
+243.65 564.23 m
+94.60 0 l
+o
+np
+243.65 583.27 m
+94.60 0 l
+o
+np
+243.65 602.32 m
+94.60 0 l
+o
+np
+243.65 621.37 m
+94.60 0 l
+o
+np
+251.53 543.46 m
+0 79.62 l
+o
+np
+273.03 543.46 m
+0 79.62 l
+o
+np
+294.53 543.46 m
+0 79.62 l
+o
+np
+316.03 543.46 m
+0 79.62 l
+o
+gsave
+247.95 547.08 translate
+86.00 72.38 scale
+8 dict dup begin
+  /ImageType 1 def
+  /Width 12 def
+  /Height 19 def
+  /BitsPerComponent 8 def
+  /Decode [0 1 0 1 0 1] def
+  /DataSource currentfile /ASCIIHexDecode filter def
+  /ImageMatrix [12 0 0 -19 0 19] def
+end
+image
+d41862cf1358d1155bd51963de2176de67b1cfa8d1d2b2d6d8c2dfcc9eccd480bde351a0ca98c9cb9ccbd285bfdb6fb4d77bbacfa8d1dac6e1d7beddd9c2dfd3b5d8d67bbae354a3e15eaae44e9ee54196e54799e44b9cd57fbccda2ced0acd4d8c1ded2b0d6d1b0d5cea5d0dd2074d81c6ae62888e53f95e34f9fd284bfcea5d0d3b6d9d7beddd2b4d7cc9ecccd8ec4d878b8e257a5e22580e52886e7298ae34f9fda73b6d284becda1cdca96c8db6fb4e54698e15aa7df64afe063aeda72b6dc6db4d67cbbcfa6d0cfa7d1d3b5d8cc9fcdca98c9d67cbae2247edc2073df2279e42683e54196dd6ab2cb9ccbcea5d0d0aad2cfa7d1d383bed67dbbdc1f71d51964d51963d91c6be32681e15ca8d878b8ca98c9cea4cfce8bc2da72b6e255a3e63a92e6358fe52785e7298add2074e62887e256a4df66b0db70b5d779b9d77abacb9ccbe2257fde2177d91d6cdc1f72e72f8cde67b1cda1cdcfa9d2d8c1ded7bfdddb71b5df66b0de69b2dd6ab2e15daadd6ab2df65b0da73b6ca92c6cc9fcdcc9dccc995c8df66b1e44a9cd0145ad2165fd31760d81b69e63d94d77ab9d2b1d6d7bfddd6bddcd0abd3c995c7dd6bb3d71b69cb1155c50f53d91d6ce42682e15ca8d382bdcc90c5cc8fc4df63aee44799e54598e15daae44e9ee7298ae72f8ce7308dd480bdd1add4dac5e0cc9ccbcfa6d0dc6fb4e352a1df63afe255a3e15eaadf64afe44e9eda73b6cea4cfd6bedde5ddede8e3f0d2b1d6cb9bcad285bfd383becc90c5ca92c6cb9bcbd2b3d7e1d4e8e1d5e9e3d9ebd3b5d8ca93c6cb91c5d67cbad383becf89c1d976b7d878b9d0aad2decee5e5dcece0d2e7d0abd3cf8bc2ca96c8e54498e060abcf89c1cb9acad2b2d6ddcce4e8e3f0ebe6f2e9e3f0d3b6d8ca97c9d57ebbe32681e54397e34f9fe062aee063aecf8ac2d2b0d5d4b7d9dcc9e3cea4cfe34f9fe34e9e>
+grestore
+0.2000 0.2000 0.2000 srgb
+1 setlinecap
+243.65 543.46 94.60 79.62 r p1
+0.00 0.00 708.66 850.39 cl
+243.65 441.15 338.25 520.77 cl
+/bg { 1 1 1 srgb } def
+243.65 441.15 94.60 79.62 r p2
+0.9216 0.9216 0.9216 srgb
+0.53 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+243.65 452.39 m
+94.60 0 l
+o
+np
+243.65 471.44 m
+94.60 0 l
+o
+np
+243.65 490.49 m
+94.60 0 l
+o
+np
+243.65 509.54 m
+94.60 0 l
+o
+np
+262.28 441.15 m
+0 79.62 l
+o
+np
+283.78 441.15 m
+0 79.62 l
+o
+np
+305.28 441.15 m
+0 79.62 l
+o
+np
+326.78 441.15 m
+0 79.62 l
+o
+np
+337.53 441.15 m
+0 79.62 l
+o
+1.07 setlinewidth
+[] 0 setdash
+np
+243.65 442.87 m
+94.60 0 l
+o
+np
+243.65 461.91 m
+94.60 0 l
+o
+np
+243.65 480.96 m
+94.60 0 l
+o
+np
+243.65 500.01 m
+94.60 0 l
+o
+np
+243.65 519.06 m
+94.60 0 l
+o
+np
+251.53 441.15 m
+0 79.62 l
+o
+np
+273.03 441.15 m
+0 79.62 l
+o
+np
+294.53 441.15 m
+0 79.62 l
+o
+np
+316.03 441.15 m
+0 79.62 l
+o
+gsave
+247.95 444.77 translate
+86.00 72.38 scale
+8 dict dup begin
+  /ImageType 1 def
+  /Width 12 def
+  /Height 19 def
+  /BitsPerComponent 8 def
+  /Decode [0 1 0 1 0 1] def
+  /DataSource currentfile /ASCIIHexDecode filter def
+  /ImageMatrix [12 0 0 -19 0 19] def
+end
+image
+d91d6cd1155cba0b4fad064aa70448d01459e63790e061ade15eaae15ca9e254a3e54497dc1f71d31761bf0d51c20e52cc1155e52785e15da9dd6ab2dc6cb3e15aa7e4479ae6348fe62887e2257fd71b68d41862d0145adf2279e15ca9da73b6d77ab9dd6ab2dc6db3dd6ab2b80a4e970042990043b0074cd71a67e54598db70b5d976b7d976b8de67b1e259a6e54095ca1155b4084d97004298004393003fc20e52e6338ee15da9db70b5e060ace54095de2177d61a67d0145ac81054bf0d51bd0c50db1f71e4489ae15ca8de67b1e25aa7e44e9ee6348fae064b9d014593003fa40347ca1054e42683e060acd878b8d284bed975b7e061ade352a1e15ca9e15ba7e259a6e258a5e351a0e062aed57dbbce8bc2cf89c1d67dbbdd6ab2e256a4e53f94e63790e6328ee63a92e44c9dd284becea4cfd2b0d6d0acd3cda1ced7beddd0acd39d0145a70448b6094ecd1256da1e6fe259a6d480bcd57fbcdb70b5e062ade256a4e52887e15ca8e54196e1247de32682e63a92df63aed77ab9dd6cb3d67cbbe05fabe42683d71a67e34f9fe63690db1e6fcf1358e52786da73b6cea5d0d2b3d7d5badbcd9fcdcd8ec4d67bbae063aee351a0e4489ae061add77ab9ca93c7cfa9d2d3b7d9d9c3dfcea6d0ca93c6d480bce72b8be7298ae52785e62889e353a2ca98c9d7bfdddecee5dccae3d2b2d6cb9acacb91c5c996c8dc6db4e44b9ce72e8ce54397da72b6cfa6d0d1b0d5d3b7d9cc9dcbd57fbcdb70b5ce8bc2d67cbad77abacf89c1cb99c9d7bfdde3d9ebe8e3f0e9e3f0e5ddeddac6e1d3b7d9d77bbae061adde68b1da73b6ce8cc3d1aed4d8c1deddcbe3dfd0e6d8c1ded4b9dad1afd5e72e8cd41861df2278df63afca96c8dac6e1ddcbe4d3b7d9d3b6d9decee5d0abd3cda2cecc8fc4de69b2e353a2df64afd481bdcda0cdd3b6d9ddcce4d6bddcd0acd3d089c1d088c1>
+grestore
+0.2000 0.2000 0.2000 srgb
+1 setlinecap
+243.65 441.15 94.60 79.62 r p1
+0.00 0.00 708.66 850.39 cl
+243.65 338.84 338.25 418.46 cl
+/bg { 1 1 1 srgb } def
+243.65 338.84 94.60 79.62 r p2
+0.9216 0.9216 0.9216 srgb
+0.53 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+243.65 350.08 m
+94.60 0 l
+o
+np
+243.65 369.13 m
+94.60 0 l
+o
+np
+243.65 388.18 m
+94.60 0 l
+o
+np
+243.65 407.23 m
+94.60 0 l
+o
+np
+262.28 338.84 m
+0 79.62 l
+o
+np
+283.78 338.84 m
+0 79.62 l
+o
+np
+305.28 338.84 m
+0 79.62 l
+o
+np
+326.78 338.84 m
+0 79.62 l
+o
+np
+337.53 338.84 m
+0 79.62 l
+o
+1.07 setlinewidth
+[] 0 setdash
+np
+243.65 340.56 m
+94.60 0 l
+o
+np
+243.65 359.60 m
+94.60 0 l
+o
+np
+243.65 378.65 m
+94.60 0 l
+o
+np
+243.65 397.70 m
+94.60 0 l
+o
+np
+243.65 416.75 m
+94.60 0 l
+o
+np
+251.53 338.84 m
+0 79.62 l
+o
+np
+273.03 338.84 m
+0 79.62 l
+o
+np
+294.53 338.84 m
+0 79.62 l
+o
+np
+316.03 338.84 m
+0 79.62 l
+o
+gsave
+247.95 342.46 translate
+86.00 72.38 scale
+8 dict dup begin
+  /ImageType 1 def
+  /Width 12 def
+  /Height 19 def
+  /BitsPerComponent 8 def
+  /Decode [0 1 0 1 0 1] def
+  /DataSource currentfile /ASCIIHexDecode filter def
+  /ImageMatrix [12 0 0 -19 0 19] def
+end
+image
+de68b1e72b8bd31760c30e52a50348bc0c50e353a1d089c1cf8ac1d283bed186bfd382bdd0aad2d0abd3cfa7d1cd9fcdcd9fcdd1aed4d8c2dfdfd0e6dbc7e1d4badacfa8d1ca97c9d1aed4cfa6d0d382bed57fbcdd6bb3d77abad4b9dad8c1ded7bfdddac5e0d6bddcd3b5d8e7298ad41862d51964df2278e54598d67dbbd0aad2dbc7e2ddcbe4decee5d9c3dfc995c7c996c8d67bbae259a6e42784e32682e353a2cc9dccd2b3d7ddcbe4d7beddd2b2d6ca96c8db6fb4e061ade34f9fe72a8ad91d6de54296d975b7d2b1d6e1d4e8e8e2f0ddcde4d3b4d7d284bfdd6ab2e54196dd2074e0237ae350a0d67bbad0aad2d3b6d8d8c2dfd3b7d9d2b3d7d2b2d6d2b3d7cea5d0cfa6d0cfa8d1d7c0dedac5e0ddcbe3e3d8eae3d8eae2d7ead8c1decea5d0d0acd3cda1cecb9bcbcc9dccddcce4e3d8eae9e4f1ece7f2ede8f3f0ebf4eae5f1e15da9e2247ed71b68d91c6bdd2073dc6db4cea4cfd5bcdcdbc8e2dccae3dfcfe6d2b2d6dbc8e2dac6e1d6bddcd6bcdcd4b8d9e0d2e7e2d7eaeee9f3f1ecf5efeaf4e4d9ebdac5e0d2b3d7d3b6d8cea4cfca98c9d1add4e2d7eaece7f2e7e1efece7f2ebe6f1efeaf4e4dbecd6bddcd2b3d7cea3cfd1add4d2b2d7dfd0e6dbc8e2e7e0eeece7f2decee5decfe5e5dcecdbc7e2e2d6e9dac6e1d8c1dedac6e1e7e1eff0ebf4f2eef6efeaf4f1edf5eae5f1e5dcece6dfeee3d9ebdecde4decde5e3d9ebebe5f1e4dbecece7f2f2eef6f1edf5f1ecf5eeeaf4ddcde4dbc8e2e1d4e8ebe5f1eeeaf4f2eef6f0ebf5f4f0f7f5f1f8f3eff6f5f1f8f3f0f7cea4cfcea4cfd0acd3d3b5d8d9c3e0e5ddede4daecebe6f2f3eff6efeaf4f1edf5e2d7eadd6ab2e350a0e259a6cc8fc4d3b7d9e8e2f0e7e1efe7e2eff3eff6ebe6f2e4dbecd8c1ded382becc9ccbcc9ecccda2cecea5d0d6bcdcd9c3dfe6dfeeeae5f1e6dfeee3d8ebdecee5>
+grestore
+0.2000 0.2000 0.2000 srgb
+1 setlinecap
+243.65 338.84 94.60 79.62 r p1
+0.00 0.00 708.66 850.39 cl
+243.65 236.53 338.25 316.15 cl
+/bg { 1 1 1 srgb } def
+243.65 236.53 94.60 79.62 r p2
+0.9216 0.9216 0.9216 srgb
+0.53 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+243.65 247.77 m
+94.60 0 l
+o
+np
+243.65 266.82 m
+94.60 0 l
+o
+np
+243.65 285.87 m
+94.60 0 l
+o
+np
+243.65 304.91 m
+94.60 0 l
+o
+np
+262.28 236.53 m
+0 79.62 l
+o
+np
+283.78 236.53 m
+0 79.62 l
+o
+np
+305.28 236.53 m
+0 79.62 l
+o
+np
+326.78 236.53 m
+0 79.62 l
+o
+np
+337.53 236.53 m
+0 79.62 l
+o
+1.07 setlinewidth
+[] 0 setdash
+np
+243.65 238.25 m
+94.60 0 l
+o
+np
+243.65 257.29 m
+94.60 0 l
+o
+np
+243.65 276.34 m
+94.60 0 l
+o
+np
+243.65 295.39 m
+94.60 0 l
+o
+np
+243.65 314.44 m
+94.60 0 l
+o
+np
+251.53 236.53 m
+0 79.62 l
+o
+np
+273.03 236.53 m
+0 79.62 l
+o
+np
+294.53 236.53 m
+0 79.62 l
+o
+np
+316.03 236.53 m
+0 79.62 l
+o
+gsave
+247.95 240.15 translate
+86.00 72.38 scale
+8 dict dup begin
+  /ImageType 1 def
+  /Width 12 def
+  /Height 19 def
+  /BitsPerComponent 8 def
+  /Decode [0 1 0 1 0 1] def
+  /DataSource currentfile /ASCIIHexDecode filter def
+  /ImageMatrix [12 0 0 -19 0 19] def
+end
+image
+e44c9de0227ad41861be0c51be0c50e62888d57fbcd0acd3d4b9dad2b2d6cc9eccd088c0ddcde4dccae3d5bcdcd3b6d8d4badae0d2e7e5ddede9e4f0eae4f1e4dbecd8c0decfa6d0e1d4e8dfd1e6dfd0e6e2d7eae7e1efebe6f2eee9f3ebe6f2e6dfeee1d5e9e2d6e9e2d6e9e7298adc1f72dc1f71e62887d975b7d6bddce4daece8e2efe8e2f0e2d7eadecfe5d0abd3e0237bb80a4e8e003b9a0144cf1358e15aa7cea3cfd4b8dad9c3dfd4b9dacda0cdd878b8cfa9d2db71b5e62887cb1155db1e6fde69b1cda1ced9c4e0dac5e0d7beddd1afd5cb9acadd6bb2e63790d3175fd61965e54598c995c7dccae3e8e2f0eae5f1eae4f1e6dfeee4daebd7bfddd0abd3cb91c5d187c0cb9ccbd6bddce6deeeebe6f2eeeaf4e9e3f0e2d7eadbc8e2cda1cedc6db4e4479ae32580e54498cea5d0e2d6eae8e2efe5ddede2d6e9ede8f3ece7f2dc6eb4e52785d51863db1e70e63c93cb9acadccae3e7e0efeae5f1ebe6f2e8e2efd8c2dfe2d7eae1d4e8d3b4d8d2b0d5d5bcdbe8e2efeeeaf4f2eef6f2eff6ede9f3e7e0efd6bddcdfd0e6dbc8e2d1add4cea4cfdcc9e2e9e4f1ede8f3f1edf5f2eef6f1edf5f0ebf4ebe5f1ca92c6e15ca8e52784e42684e15aa7d1aed4e0d3e7ece7f2eae4f1e6dfeeddcbe4dbc8e2d9c4e0cc9fcce15ba8e54095d974b7d6bddce8e2f0eee9f3f1ecf5eeeaf4eae4f1dfd0e6f1edf5ece7f2e1d3e8d9c4e0dbc7e1e0d2e7eae4f1f1edf5f4f0f7f4f0f7f0ebf5f0ebf4f1edf5ece7f2e9e3f0e1d4e8e1d4e8f0ebf4f4f1f7f6f3f8f6f3f8f6f3f9f6f3f8f5f1f8d1afd5cea5d0cd8dc3cfa7d1d8c0deeae5f1f2eef6f5f2f8f6f3f8f6f3f8f6f2f8ede9f3d2b4d7d77bbadf63aedc6eb4d185bfd3b5d8ece6f2f1edf5f4f0f7f3f0f7eeeaf4eae4f1d8c2dfcea5d0d976b8e44e9ee351a0ce8cc3decee5ebe6f2efebf4f0ecf5f1edf5eeeaf4>
+grestore
+0.2000 0.2000 0.2000 srgb
+1 setlinecap
+243.65 236.53 94.60 79.62 r p1
+0.00 0.00 708.66 850.39 cl
+243.65 134.22 338.25 213.84 cl
+/bg { 1 1 1 srgb } def
+243.65 134.22 94.60 79.62 r p2
+0.9216 0.9216 0.9216 srgb
+0.53 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+243.65 145.46 m
+94.60 0 l
+o
+np
+243.65 164.51 m
+94.60 0 l
+o
+np
+243.65 183.56 m
+94.60 0 l
+o
+np
+243.65 202.60 m
+94.60 0 l
+o
+np
+262.28 134.22 m
+0 79.62 l
+o
+np
+283.78 134.22 m
+0 79.62 l
+o
+np
+305.28 134.22 m
+0 79.62 l
+o
+np
+326.78 134.22 m
+0 79.62 l
+o
+np
+337.53 134.22 m
+0 79.62 l
+o
+1.07 setlinewidth
+[] 0 setdash
+np
+243.65 135.94 m
+94.60 0 l
+o
+np
+243.65 154.98 m
+94.60 0 l
+o
+np
+243.65 174.03 m
+94.60 0 l
+o
+np
+243.65 193.08 m
+94.60 0 l
+o
+np
+243.65 212.13 m
+94.60 0 l
+o
+np
+251.53 134.22 m
+0 79.62 l
+o
+np
+273.03 134.22 m
+0 79.62 l
+o
+np
+294.53 134.22 m
+0 79.62 l
+o
+np
+316.03 134.22 m
+0 79.62 l
+o
+gsave
+247.95 137.84 translate
+86.00 72.38 scale
+8 dict dup begin
+  /ImageType 1 def
+  /Width 12 def
+  /Height 19 def
+  /BitsPerComponent 8 def
+  /Decode [0 1 0 1 0 1] def
+  /DataSource currentfile /ASCIIHexDecode filter def
+  /ImageMatrix [12 0 0 -19 0 19] def
+end
+image
+d5bbdbc994c7e15eaae72989de2177e255a3c995c8d4b8d9d6bcdccfa6d0db71b5e4489ae7e0eee8e2f0e8e2f0e0d3e8e6deedeee9f3f0ecf5f1edf6f3eff6ebe6f2eee9f3e8e2f0dbc7e1decee5e1d4e8e8e2efe8e2f0ede8f3efebf4ece7f2e5dcece6dfeee4dcece3d9ebe62887d61a65d2165fdc1f72d285bfdcc9e2e4daebe8e3f0e8e2f0e1d3e8dbc7e2d3b6d9cb90c5df66b1de2176d91c6be54397d285bfd5bcdbdbc7e1e1d3e8ddcce4cfa8d1d481bdcb91c5db71b5e354a2e54598e15da9d0abd3dac5e0e0d2e7e3d8eadccbe3ddcce4d8c2dfe44a9cdd2075cd1256d51863e4489acb99cae2d6e9ede8f2ece7f2e8e2f0ddcce4d4b8d9e7e0efdac5e0cea3cfcea3cfd2b2d6e6deedefeaf4efebf4f1edf5ede8f3e3d9ebcea4cfd976b8e63e94e1247de54296d57ebbe3d8eaf2eef6f2eef6f1edf5eee9f3eee9f3e1d5e9d0acd3e060acdf2278db1e70e54699cfa7d1e1d3e8eae5f1e7e0efe4daecdcc9e2cb9acae7e1efe6dfeed8c1dedcc9e2e3d8eaefebf4f2eef6f2eff6f3f0f7f3eff6eee9f3eae5f1e9e3f0e7e1efd9c2dfd6bcdce0d2e7eee9f3f1edf5efeaf4f1edf5f0ecf5ede8f3e8e3f0d1afd5d779b9e62887e0237ae15eaadbc8e2ede8f3f2eef6f0ebf4eee9f3e8e2f0e7e1eff1edf5efebf4dbc7e2d3b6d8e8e3f0f2eef6f5f2f8f6f3f9f6f3f8f5f2f8f3f0f7f2eef6f0ecf5efebf4dfd0e6d9c3dfe4dbecede8f3f4f0f7f4f0f7f7f4f9f6f3f8f5f2f8f5f1f8f3eff6f4f0f7f3f0f7f0ecf5f6f2f8f7f4f9f7f4f9f6f3f9f6f3f9f6f3f8f6f2f8f5f2f8d0a9d2d67cbae4479ad77bbad7bfddf1edf5f5f2f8f6f3f9f6f3f9f6f3f9f5f2f8f0ecf5e1d5e9d2b2d6d186bfdb70b5cb90c5e1d3e8efebf4ece7f2f1edf5efebf4ebe6f1ebe6f1efeaf4ddcce4d2b1d6d7bfdde6e0eef3f0f7f4f0f7f3f0f7f5f1f8f5f1f8f4f0f7f4f1f7>
+grestore
+0.2000 0.2000 0.2000 srgb
+1 setlinecap
+243.65 134.22 94.60 79.62 r p1
+0.00 0.00 708.66 850.39 cl
+243.65 31.91 338.25 111.53 cl
+/bg { 1 1 1 srgb } def
+243.65 31.91 94.60 79.62 r p2
+0.9216 0.9216 0.9216 srgb
+0.53 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+243.65 43.15 m
+94.60 0 l
+o
+np
+243.65 62.20 m
+94.60 0 l
+o
+np
+243.65 81.25 m
+94.60 0 l
+o
+np
+243.65 100.29 m
+94.60 0 l
+o
+np
+262.28 31.91 m
+0 79.62 l
+o
+np
+283.78 31.91 m
+0 79.62 l
+o
+np
+305.28 31.91 m
+0 79.62 l
+o
+np
+326.78 31.91 m
+0 79.62 l
+o
+np
+337.53 31.91 m
+0 79.62 l
+o
+1.07 setlinewidth
+[] 0 setdash
+np
+243.65 33.63 m
+94.60 0 l
+o
+np
+243.65 52.67 m
+94.60 0 l
+o
+np
+243.65 71.72 m
+94.60 0 l
+o
+np
+243.65 90.77 m
+94.60 0 l
+o
+np
+243.65 109.82 m
+94.60 0 l
+o
+np
+251.53 31.91 m
+0 79.62 l
+o
+np
+273.03 31.91 m
+0 79.62 l
+o
+np
+294.53 31.91 m
+0 79.62 l
+o
+np
+316.03 31.91 m
+0 79.62 l
+o
+gsave
+247.95 35.53 translate
+86.00 72.38 scale
+8 dict dup begin
+  /ImageType 1 def
+  /Width 12 def
+  /Height 19 def
+  /BitsPerComponent 8 def
+  /Decode [0 1 0 1 0 1] def
+  /DataSource currentfile /ASCIIHexDecode filter def
+  /ImageMatrix [12 0 0 -19 0 19] def
+end
+image
+f2eef6f3f0f7e7e1efd6bddcd3b6d9e4daebf0ebf5f4f0f7f4f0f7f5f1f8f4f0f7f3eff6f4f0f7f4f0f7f4f1f7f5f2f8f5f2f8f6f3f9f6f3f9f7f4f9f6f3f9f5f2f8f6f3f8f5f2f8f1edf5f4f0f7f4f0f7f5f2f8f5f2f8f7f3f9f6f3f8f6f3f9f6f3f8f5f1f8f5f2f8f3eff6e6dfeed9c3dfcc9dcccda1cee3d8eaf4f0f7f5f1f7f5f1f8f6f2f8f4f0f7f3eff7efebf4f4f1f7f2eef6d6bddcd1aed5e1d4e8f1edf5f5f1f8f4f1f7f5f2f8f5f2f8f4f1f7efebf4f4f1f7f2eef6f2eef6f3eff6f5f1f8f6f3f9f6f3f9f7f3f9f7f4f9f7f4f9f7f4f9f6f3f8f2eef6ece7f2e9e4f0ebe6f2f1edf6f6f2f8f6f3f9f6f2f8f7f4f9f7f3f9f7f4f9f6f3f9f4f0f7f4f1f7f1edf6f2eef6f4f0f7f6f3f8f6f3f9f7f4f9f7f4f9f7f4f9f6f3f8f5f2f8f4f1f7f3eff7ede8f3e8e2eff2eef6f6f3f8f6f3f9f6f3f9f6f3f9f7f4f9f7f4f9f6f3f9f2eef6d0acd3d481bdd2b3d7eee9f3f5f1f8f5f2f8f5f2f8f6f3f8f7f4f9f6f3f8f6f2f8f5f2f8f4f1f7f6f2f8f6f3f8f6f2f8f7f4f9f7f4f9f7f4f9f7f4f9f6f3f8f6f3f8f6f3f8f3eff7f4f0f7f3eff6f4f0f7f4f1f7f6f3f8f7f4f9f7f4f9f7f4f9f7f4f9f7f4f9f7f3f9f4f0f7f4f0f7efebf4e0d1e7f2eef6f6f3f8f6f3f9f7f4f9f7f4f9f6f3f9f6f3f8f6f2f8f6f3f8f4f1f7f5f2f8f5f2f8f5f2f8f6f3f8f7f4f9f7f4f9f7f4f9f7f4f9f6f3f8f7f4f9f5f2f8f6f3f8f7f3f9f7f3f9f6f2f8f6f3f9f7f4f9f6f3f9f7f4f9f7f4f9f7f4f9f7f4f9f6f3f9f6f3f9f6f3f8f6f3f9f7f4f9f6f3f9f7f4f9f7f4f9f7f4f9f7f4f9f7f4f9f7f4f9f5f2f8f5f1f8f5f2f8f6f3f8f6f3f8f6f3f9f7f4f9f6f3f9f7f4f9f7f4f9f7f4f9f6f3f9ede8f2e3d8eaece7f2f4f0f7f5f1f7f6f3f8f6f3f8f5f2f8f6f3f8f7f4f9f6f3f8f6f2f8f5f2f8f6f3f9f6f3f9f6f3f8f6f3f8f6f3f8f6f3f9f6f3f8f7f4f9f7f4f9f7f4f9f6f2f8>
+grestore
+0.2000 0.2000 0.2000 srgb
+1 setlinecap
+243.65 31.91 94.60 79.62 r p1
+0.00 0.00 708.66 850.39 cl
+343.73 645.77 438.33 725.39 cl
+/bg { 1 1 1 srgb } def
+343.73 645.77 94.60 79.62 r p2
+0.9216 0.9216 0.9216 srgb
+0.53 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+343.73 657.01 m
+94.60 0 l
+o
+np
+343.73 676.06 m
+94.60 0 l
+o
+np
+343.73 695.11 m
+94.60 0 l
+o
+np
+343.73 714.16 m
+94.60 0 l
+o
+np
+362.36 645.77 m
+0 79.62 l
+o
+np
+383.86 645.77 m
+0 79.62 l
+o
+np
+405.36 645.77 m
+0 79.62 l
+o
+np
+426.86 645.77 m
+0 79.62 l
+o
+np
+437.61 645.77 m
+0 79.62 l
+o
+1.07 setlinewidth
+[] 0 setdash
+np
+343.73 647.49 m
+94.60 0 l
+o
+np
+343.73 666.54 m
+94.60 0 l
+o
+np
+343.73 685.58 m
+94.60 0 l
+o
+np
+343.73 704.63 m
+94.60 0 l
+o
+np
+343.73 723.68 m
+94.60 0 l
+o
+np
+351.61 645.77 m
+0 79.62 l
+o
+np
+373.11 645.77 m
+0 79.62 l
+o
+np
+394.61 645.77 m
+0 79.62 l
+o
+np
+416.11 645.77 m
+0 79.62 l
+o
+gsave
+348.03 649.39 translate
+86.00 72.38 scale
+8 dict dup begin
+  /ImageType 1 def
+  /Width 12 def
+  /Height 19 def
+  /BitsPerComponent 8 def
+  /Decode [0 1 0 1 0 1] def
+  /DataSource currentfile /ASCIIHexDecode filter def
+  /ImageMatrix [12 0 0 -19 0 19] def
+end
+image
+d7c0ded2b2d6cb99cacd8dc3d088c1cb9acad3b6d9d7bfdddfd0e6e0d3e8e7e0efe9e4f0dccae3dccae3dac6e1d1aed4d0abd3e3d9ebeae5f1e8e2f0eae5f1eae4f1ebe6f2ebe6f2d0abd3db71b5d67cbacb91c5ca96c8d0acd3d7c0ded9c4e0e3d8eae6e0eee4dbece0d3e8e15eabe6338ee2257fe62887de69b2d1afd5dbc7e2ddcbe4e6dfeee7e1efe0d1e7d4b7d9cfa7d1cc9fccde68b1da73b6ca93c6d1aed4dbc8e2dfcfe6e0d3e8dccbe3d7beddd0abd3e3d8ead8c1ded3b6d9d2b3d7d4b7d9dac6e1dbc8e2ddcbe4e3d9ebeae4f1e6deeedac4e0d7bfddcfa7d1cfa7d1cc9fcdd0aad2d4badadecfe5decee5e1d5e8e8e3f0e9e4f0ece6f2cea3cfca97c9d089c1ca98c9cc9fccd1add4d6bddcd9c3dfe0d1e7e7e1efece7f2e4dbeccf8ac2d877b8d879b9cd8ec4d087c0d187c0cc8fc4cd8dc3d2b3d7ddcce4e4dbecdbc7e1e3d8eadfd1e6d6bddcd4b9dad1aed4d0abd3cc9fcdd57dbbc995c7d0add4d4b8dadbc8e2e0d2e7d7c0decc9fcdd2b2d7cfa9d2dccae3ebe6f2ebe6f2ede8f3f2eef6f4f0f7f2eef6cea4cfce8bc2da73b6d879b9cea5d0dcc9e2e9e3f0ebe6f2f0ecf5f3eff6ebe6f1e8e2f0d976b8e15ba8e256a4e061adde68b1d088c0cb9ccbd3b4d8dbc8e2ddcce4ddcbe3d4b9dad2b3d7cea4cfcfa8d1cea3cfcb99cad4b8dad4b8d9d1afd5d6bddcd2b0d5d3b6d9d0aad2d3b6d8cd9fcdcf8ac1c995c7d67cbacf89c1ca93c7d2b1d6dbc7e1e7e1efe7e0efe9e3f0ddcde4d6bcdcd7bfdddecee5ddcce4e1d3e8e7e2efe8e2efefeaf4e9e3f0e6e0eee0d1e7d67bbad877b8d57fbccc9dcbcea4cfd5bcdcd9c4e0e0d2e7e6e0eeece7f2e8e3f0dfd0e6ca93c6df66b0de69b2cd8dc3cc9dccd2b2d6d4b8d9d2b1d6d7c0ded0a9d2cea5d0d0abd3d185bfd088c0d77abaca92c6cb91c5d0aad2d7beddddcbe4e5ddede1d4e8e1d3e8d8c2df>
+grestore
+0.2000 0.2000 0.2000 srgb
+1 setlinecap
+343.73 645.77 94.60 79.62 r p1
+0.00 0.00 708.66 850.39 cl
+343.73 543.46 438.33 623.08 cl
+/bg { 1 1 1 srgb } def
+343.73 543.46 94.60 79.62 r p2
+0.9216 0.9216 0.9216 srgb
+0.53 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+343.73 554.70 m
+94.60 0 l
+o
+np
+343.73 573.75 m
+94.60 0 l
+o
+np
+343.73 592.80 m
+94.60 0 l
+o
+np
+343.73 611.85 m
+94.60 0 l
+o
+np
+362.36 543.46 m
+0 79.62 l
+o
+np
+383.86 543.46 m
+0 79.62 l
+o
+np
+405.36 543.46 m
+0 79.62 l
+o
+np
+426.86 543.46 m
+0 79.62 l
+o
+np
+437.61 543.46 m
+0 79.62 l
+o
+1.07 setlinewidth
+[] 0 setdash
+np
+343.73 545.18 m
+94.60 0 l
+o
+np
+343.73 564.23 m
+94.60 0 l
+o
+np
+343.73 583.27 m
+94.60 0 l
+o
+np
+343.73 602.32 m
+94.60 0 l
+o
+np
+343.73 621.37 m
+94.60 0 l
+o
+np
+351.61 543.46 m
+0 79.62 l
+o
+np
+373.11 543.46 m
+0 79.62 l
+o
+np
+394.61 543.46 m
+0 79.62 l
+o
+np
+416.11 543.46 m
+0 79.62 l
+o
+gsave
+348.03 547.08 translate
+86.00 72.38 scale
+8 dict dup begin
+  /ImageType 1 def
+  /Width 12 def
+  /Height 19 def
+  /BitsPerComponent 8 def
+  /Decode [0 1 0 1 0 1] def
+  /DataSource currentfile /ASCIIHexDecode filter def
+  /ImageMatrix [12 0 0 -19 0 19] def
+end
+image
+d2b0d5cfa7d1d878b8e353a2e63991e255a3db6fb4cc9ccbd7bfdddac6e1ddcce4decee5d1add4d2b1d6cfa8d1d1aed4cda0cdd1add4d6bddcd9c3dfe0d3e8e6dfeee6deeedecee5d3b7d9d1aed4d383bedc6db3e354a3da72b6cd8ec4cfa8d1d7c0dee1d3e8e4dbecdbc7e1cd9fcdce8bc2d57dbbe44d9edd6cb3cc8fc4d0aad2d4b8dadfd0e6ddcbe4e2d7eadcc9e2d1add4c994c7e54799e6358fe44e9ed382bed0abd3d5bcdcddcce4dcc9e3dccae3d8c1decea5d0cc9ecccc8fc4dd6cb3e53f94e44d9ddd6cb3cb91c6cea5d0d3b7d9d2b2d7d8c1decda2cece8cc3d779b9da72b6d976b8d67bbacd8dc3d0abd3d3b4d8dccae3dac5e0e2d7ead57fbcd975b7e258a5e52886de2176e353a2d877b8ca92c6d2b3d7d7c0ddd7c0ddd5badbd975b7df63aee44d9ee54297e54397e15ba8d67dbbca93c6d3b4d7f4f0f7f4f1f7e0d2e7cfa7d1d186bfd974b7dd6ab2e062aede69b2da73b6d186c0c994c7d1b0d5d0aad2cea3cfd6beddd4b8d9d088c1d57ebbd67dbbd481bdce8bc2cc9ccbd7bfdddac6e1dac5e0d8c2dfd3b4d7cea4cfd77abad285bfcda0cdd2b3d7e5ddedefebf4ece7f2efebf4ebe6f2eae4f1d878b8d382bddc6cb3e15ca8e62888e62888d67cbbcda1cdd4badaddcce4e0d2e7d3b6d9cfa8d1cea3cfcb91c5cc8fc4d975b7e259a6d186bfcda1cdd6bcdcd9c4e0dfd1e7cfa8d1d2b1d6cea4cfd088c0cf89c1d877b8df66b0d878b8cb92c6d8c1dee0d2e7e3d8eaeeeaf4decde5d6beddd2b3d7e2d7eae4dbece3d8eae4daebd8c0dee2d6e9e9e4f1e7e1efeeeaf4cf8ac1dc6eb4e53e94e6348fe6338ee15aa7d285bfcea4cfdccbe3e3d9ebe8e2efdfcfe6de67b1e352a1e44d9de34e9ee15daad77bbace8bc2c995c8cda0cdcea3cfca97c8d1aed4ce8cc3df64afe351a0e63c93e63b92e4499bdb70b5d57fbccda1cecfa7d1d0acd3d1afd5>
+grestore
+0.2000 0.2000 0.2000 srgb
+1 setlinecap
+343.73 543.46 94.60 79.62 r p1
+0.00 0.00 708.66 850.39 cl
+343.73 441.15 438.33 520.77 cl
+/bg { 1 1 1 srgb } def
+343.73 441.15 94.60 79.62 r p2
+0.9216 0.9216 0.9216 srgb
+0.53 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+343.73 452.39 m
+94.60 0 l
+o
+np
+343.73 471.44 m
+94.60 0 l
+o
+np
+343.73 490.49 m
+94.60 0 l
+o
+np
+343.73 509.54 m
+94.60 0 l
+o
+np
+362.36 441.15 m
+0 79.62 l
+o
+np
+383.86 441.15 m
+0 79.62 l
+o
+np
+405.36 441.15 m
+0 79.62 l
+o
+np
+426.86 441.15 m
+0 79.62 l
+o
+np
+437.61 441.15 m
+0 79.62 l
+o
+1.07 setlinewidth
+[] 0 setdash
+np
+343.73 442.87 m
+94.60 0 l
+o
+np
+343.73 461.91 m
+94.60 0 l
+o
+np
+343.73 480.96 m
+94.60 0 l
+o
+np
+343.73 500.01 m
+94.60 0 l
+o
+np
+343.73 519.06 m
+94.60 0 l
+o
+np
+351.61 441.15 m
+0 79.62 l
+o
+np
+373.11 441.15 m
+0 79.62 l
+o
+np
+394.61 441.15 m
+0 79.62 l
+o
+np
+416.11 441.15 m
+0 79.62 l
+o
+gsave
+348.03 444.77 translate
+86.00 72.38 scale
+8 dict dup begin
+  /ImageType 1 def
+  /Width 12 def
+  /Height 19 def
+  /BitsPerComponent 8 def
+  /Decode [0 1 0 1 0 1] def
+  /DataSource currentfile /ASCIIHexDecode filter def
+  /ImageMatrix [12 0 0 -19 0 19] def
+end
+image
+d284bede67b1e15aa7e54397e1237ce63a92e34f9fde69b1d67cbbcf89c1ca93c6cda2ced7c0ded5bbdbd0aad2c994c7cb9bcbd2b3d7dac5e0dbc7e2e0d2e7dcc9e2d7bfddd7bfddc994c7cc9ecccda2ced0a9d2d2b1d6d8c1dedac5e0ddcce4e2d6e9e0d3e8e2d6e9dac5e0e44b9cd71b68da1e6fe44b9cd77bbacea4cfd2b0d5d5bbdbd8c0ded3b7d9d3b4d8ca97c9d0acd3d383bee63a92e63c93e54698df66b0de68b1d382bdcc8fc4cb9acacf89c1db71b5d2b3d7d0acd4cb9bcbd383bed089c1cea3cfd2b3d7d4badad7bfddd8c0dedcc9e3dbc8e2e15ca9e72f8cdd2074e62989e259a7cf89c1cda2ced3b5d8d4b8d9d9c4e0d6bedcd7c0ded975b7e062ade63991e6328ee54497da72b6d187c0cc9dccd2b2d6d4b8dad0aad2cc9eccd57fbcdd6ab2e44e9ee4479ae257a4d879b9cc90c5cea4cfd4b8d9d6bedde5dcece1d3e8d186bfd975b7e44e9ee44a9ce53e94e061add480bdcb9bcad0abd3d1afd5cb99cace8cc2e34f9fde2177c10e52d61a65e63891d976b7ca96c8d0abd3d5bcdcd9c2dfd1b0d5cc9dcccda2ced480bce15aa7e63690e257a4ce8cc2d0abd3d8c2dfdecee5d1b0d5cea3cfcda2ced3b5d8d2b1d6ca99c9cc9ccbcfa6d0d5bbdbd4b8d9dbc8e2e2d7eaddcbe4d6beddd7c0ded6beddd3b6d8cda2cecc9fccd0aad2ddcce4e5ddede9e4f1eae5f1e6deeddecee5e0d2e7d2b2d6ca96c8e062aee063aed67bbad0abd3dac6e1e1d3e8e3d9ebe4daebe1d4e8ddcce4dcc9e2d3b6d8cea3cfd4b9dad7bedddecfe5e5ddedeee9f3f1edf5f3f0f7eee9f3e9e4f1d975b7e44e9ee32681e7308de25aa7ca93c7d1aed4dbc7e1decee5ddcce4e0d1e7dcc9e2e15ca9d91d6ccb1155de2176e15daac995c8cfa9d2d1afd5d0acd3d1afd5d1afd5cfa9d2cf8ac2dc6fb4e256a4e259a6e062aecd8ec4cea6d0d4b9dad6bcdcd6beddd2b3d7d0acd3>
+grestore
+0.2000 0.2000 0.2000 srgb
+1 setlinecap
+343.73 441.15 94.60 79.62 r p1
+0.00 0.00 708.66 850.39 cl
+343.73 338.84 438.33 418.46 cl
+/bg { 1 1 1 srgb } def
+343.73 338.84 94.60 79.62 r p2
+0.9216 0.9216 0.9216 srgb
+0.53 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+343.73 350.08 m
+94.60 0 l
+o
+np
+343.73 369.13 m
+94.60 0 l
+o
+np
+343.73 388.18 m
+94.60 0 l
+o
+np
+343.73 407.23 m
+94.60 0 l
+o
+np
+362.36 338.84 m
+0 79.62 l
+o
+np
+383.86 338.84 m
+0 79.62 l
+o
+np
+405.36 338.84 m
+0 79.62 l
+o
+np
+426.86 338.84 m
+0 79.62 l
+o
+np
+437.61 338.84 m
+0 79.62 l
+o
+1.07 setlinewidth
+[] 0 setdash
+np
+343.73 340.56 m
+94.60 0 l
+o
+np
+343.73 359.60 m
+94.60 0 l
+o
+np
+343.73 378.65 m
+94.60 0 l
+o
+np
+343.73 397.70 m
+94.60 0 l
+o
+np
+343.73 416.75 m
+94.60 0 l
+o
+np
+351.61 338.84 m
+0 79.62 l
+o
+np
+373.11 338.84 m
+0 79.62 l
+o
+np
+394.61 338.84 m
+0 79.62 l
+o
+np
+416.11 338.84 m
+0 79.62 l
+o
+gsave
+348.03 342.46 translate
+86.00 72.38 scale
+8 dict dup begin
+  /ImageType 1 def
+  /Width 12 def
+  /Height 19 def
+  /BitsPerComponent 8 def
+  /Decode [0 1 0 1 0 1] def
+  /DataSource currentfile /ASCIIHexDecode filter def
+  /ImageMatrix [12 0 0 -19 0 19] def
+end
+image
+e72d8cd41863a40347820033810032ce1257de69b2cfa8d1d1afd5d2b3d7cfa7d1ce8bc2cc9fcdcb9bcad67bbae062add47fbcd0a9d2d8c2dfe0d1e7dfcfe6d8c2dfd0acd3cc90c5d77abad57fbcd975b7d186c0ca92c6d0acd3ddcce4e0d2e7dfd0e6dbc8e2dbc7e1d2b1d6b6094e8500357d002f8c003ad1155dd879b9d3b6d9dac5e0dac5e0d7c0ddd2b0d5d481bdd976b7e353a2d91c6bb5094dbf0d51e63690d089c1d1b0d5d3b6d9d0acd3d382bde54296d878b9e259a6e4489ae7318de351a0d088c0d3b4d8decde4dbc7e2dbc7e2d6bddcd2b2d6d2165db3084c8000328a0038d51964e061adcfa7d1dbc7e1dccae3d9c3dfd3b7d9cb9acaca99c9c995c7d481bdd877b8d481bdc995c7d1b0d5dbc6e1ddcde4dac5e1d2b2d6dd6cb3d481bddb70b5df64afe15ba7df65b0cfa9d2dfcfe6e6dfeee7e1efe4dbece1d4e8dac6e1e7308dd61a66b70a4eb0074bce1257de67b1cea5d0dbc7e1dfcfe6e1d4e8d6bcdccb9acacd8dc3df65b0e7308de63991e351a0cb99cad6bedde8e2f0ede8f2e5dcecd1aed4cd8dc3cfa7d1d187c0e44d9ee32682e44a9ccd8ec4e2d7eaeae4f1ebe6f1e4daecd8c1ded9c3dfcea5cfd089c1e259a6e256a4d877b8d3b4d8e4dbeceeeaf4eee9f3e7e1efe3d9ebdbc7e1cb91c5d878b8e15eaae15ba8d976b7d5bbdbebe5f1f1edf5f1edf5e9e3f0dbc7e1d5badbe8e2f0d7bfddcb9acad087c0ca97c9d7bfdde9e4f1ece7f2f1edf5ede8f3e2d7eadbc8e2d3b7d9ca96c8dc6cb3ca92c6cea3cfe2d6e9f1edf5f5f1f8f6f2f8f5f2f8f3eff6eae5f1d1afd5cb90c5da72b6ce8bc2cea6d0e0d2e7f0ecf5f1edf5f3eff6f2eef6ebe5f1e4dbecda73b6e44a9ce53f94e15ca8d57fbcd9c4e0ece7f2f0ebf4f1edf5f0ecf5e4daebd8c1decc8fc4da74b7e256a4e354a2da74b6d1aed4e0d1e7ebe6f2eae4f1e9e3f0d7bfddd1afd5>
+grestore
+0.2000 0.2000 0.2000 srgb
+1 setlinecap
+343.73 338.84 94.60 79.62 r p1
+0.00 0.00 708.66 850.39 cl
+343.73 236.53 438.33 316.15 cl
+/bg { 1 1 1 srgb } def
+343.73 236.53 94.60 79.62 r p2
+0.9216 0.9216 0.9216 srgb
+0.53 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+343.73 247.77 m
+94.60 0 l
+o
+np
+343.73 266.82 m
+94.60 0 l
+o
+np
+343.73 285.87 m
+94.60 0 l
+o
+np
+343.73 304.91 m
+94.60 0 l
+o
+np
+362.36 236.53 m
+0 79.62 l
+o
+np
+383.86 236.53 m
+0 79.62 l
+o
+np
+405.36 236.53 m
+0 79.62 l
+o
+np
+426.86 236.53 m
+0 79.62 l
+o
+np
+437.61 236.53 m
+0 79.62 l
+o
+1.07 setlinewidth
+[] 0 setdash
+np
+343.73 238.25 m
+94.60 0 l
+o
+np
+343.73 257.29 m
+94.60 0 l
+o
+np
+343.73 276.34 m
+94.60 0 l
+o
+np
+343.73 295.39 m
+94.60 0 l
+o
+np
+343.73 314.44 m
+94.60 0 l
+o
+np
+351.61 236.53 m
+0 79.62 l
+o
+np
+373.11 236.53 m
+0 79.62 l
+o
+np
+394.61 236.53 m
+0 79.62 l
+o
+np
+416.11 236.53 m
+0 79.62 l
+o
+gsave
+348.03 240.15 translate
+86.00 72.38 scale
+8 dict dup begin
+  /ImageType 1 def
+  /Width 12 def
+  /Height 19 def
+  /BitsPerComponent 8 def
+  /Decode [0 1 0 1 0 1] def
+  /DataSource currentfile /ASCIIHexDecode filter def
+  /ImageMatrix [12 0 0 -19 0 19] def
+end
+image
+cea4cfd0acd4d57ebbe354a2e54498d877b8cea3cedac4e0dfd0e6dfcfe6ddcce4d8c2dfcfa8d1cda0cdd087c0d187c0cc9dcbd2b2d6d3b7d9ddcce4e4dbece0d2e7decee5d6bcdccc9ecccea4cfcc9fcdcea4cfd0acd3d5badbdac6e1e2d6e9e2d7eadecee5dccae3d6bddcdf2279e0237bdd2074dd2175e257a4ca97c8d1aed4dcc9e2dfcfe6decde4d5bbdbcf8bc2d087c0d77ab9e53f94e42683e42684e354a2d67bbace8cc3cda1cecda0cdd382bde254a3cda1ced3b4d7d3b7d9d5badbd5badbdcc9e2e0d2e7dfd0e6decfe5dfd0e6e3d8ead7c0dee1247dca11559c0144a90549df2277dc6eb4cda2ced6bedcdbc8e2d9c4e0d5bcdbd1add4e44c9de42784cd1256b4094dbe0c50de2177df66b0d285bfcda0cdcea5d0cb9acad382bedf65b0e1247ecf1358b1074cc71053e54095d284becea5d0cea5d0cb99cacb9acaca93c6cfa6d0cb9acad383bedd6ab2e15eaad284becb9acacea6d0d7bfdddecfe5d2b2d7ca98c9cb9bcacb9acacc9dccd0acd4d6bddcdfd1e6e6e0eef0ecf5f1ecf5f1edf5e5ddeddbc7e1e1247dd71b689f0246a00246db1e6fd57fbcd0abd3dac5e0dac6e1d5bbdbd0aad2ce8cc3d088c1df64b0e72c8be62888e53f95d975b7ca96c8d2b2d7d6bddcd1aed4cd8ec4d876b8c995c7d974b7e44e9ee255a3d57fbcd1b0d5dfd0e6e4dcecebe5f1e8e2f0e3d9ebd4b9daede8f3eeeaf4f1edf5f1ecf5f2eff6f2eff6f2eef6eee9f3f0ebf4eee9f3eae4f1e1d5e9e7e1efebe6f2ebe6f2f2eef6f3eff7f5f2f8f4f1f7f2eef6f0ebf4eeeaf4ebe6f2e6dfeed0acd4cea3cfcfa6d0d8c1dee1d4e8ebe6f1f0ecf5f1edf5f0ecf5ece7f2decee5dcc9e2ae064b90003d8a0039d41862df65b0cea5cfdbc8e2e2d7eae9e3f0e1d5e9cfa8d1ce8cc3d67cbae258a6e53e94de2176e22580e259a7cb91c5d3b7d9ddcce4d6bddcd2b2d7ce8bc2>
+grestore
+0.2000 0.2000 0.2000 srgb
+1 setlinecap
+343.73 236.53 94.60 79.62 r p1
+0.00 0.00 708.66 850.39 cl
+343.73 134.22 438.33 213.84 cl
+/bg { 1 1 1 srgb } def
+343.73 134.22 94.60 79.62 r p2
+0.9216 0.9216 0.9216 srgb
+0.53 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+343.73 145.46 m
+94.60 0 l
+o
+np
+343.73 164.51 m
+94.60 0 l
+o
+np
+343.73 183.56 m
+94.60 0 l
+o
+np
+343.73 202.60 m
+94.60 0 l
+o
+np
+362.36 134.22 m
+0 79.62 l
+o
+np
+383.86 134.22 m
+0 79.62 l
+o
+np
+405.36 134.22 m
+0 79.62 l
+o
+np
+426.86 134.22 m
+0 79.62 l
+o
+np
+437.61 134.22 m
+0 79.62 l
+o
+1.07 setlinewidth
+[] 0 setdash
+np
+343.73 135.94 m
+94.60 0 l
+o
+np
+343.73 154.98 m
+94.60 0 l
+o
+np
+343.73 174.03 m
+94.60 0 l
+o
+np
+343.73 193.08 m
+94.60 0 l
+o
+np
+343.73 212.13 m
+94.60 0 l
+o
+np
+351.61 134.22 m
+0 79.62 l
+o
+np
+373.11 134.22 m
+0 79.62 l
+o
+np
+394.61 134.22 m
+0 79.62 l
+o
+np
+416.11 134.22 m
+0 79.62 l
+o
+gsave
+348.03 137.84 translate
+86.00 72.38 scale
+8 dict dup begin
+  /ImageType 1 def
+  /Width 12 def
+  /Height 19 def
+  /BitsPerComponent 8 def
+  /Decode [0 1 0 1 0 1] def
+  /DataSource currentfile /ASCIIHexDecode filter def
+  /ImageMatrix [12 0 0 -19 0 19] def
+end
+image
+f2eef6eee9f3d6bddccea5d0cda0cdd6bedde9e3f0f1edf5f4f0f7f3f0f7f0ecf5eee9f3f3eff6f2eef6f3eff6efebf4f2eef6f4f1f7f6f2f8f6f3f8f5f2f8f4f1f7f3f0f7f4f1f7f0ecf5f2eff6f2eef6f2eff6f3f0f7f4f1f7f6f2f8f6f3f8f5f1f7f4f0f7f3eff7f3f0f7d3b6d9d481bddb70b5d089c1dfd0e6f2eef6f1edf5f3eff6f4f0f7f2eef6f1ecf5ede8f3e2d6e9cda1ced57fbcd480bccda2cee3d9ebf1ecf5f2eef6f2eef6f3eff6f0ebf4eae4f1f4f1f7f5f2f8f5f2f8f1edf6f2eef6f6f3f8f4f1f7f6f3f8f4f0f7f3eff7f4f1f7f5f2f8ebe6f1eae4f1ece7f2e9e3f0f1edf5f4f0f7f6f3f9f6f3f9f6f3f8f6f3f9f6f3f8f6f3f8f3eff7f3eff6f3eff7f2eff6f4f0f7f6f3f8f6f3f8f6f3f9f7f4f9f7f4f9f6f3f9f6f3f9f2eef6f2eef6f1edf5efeaf4f2eef6f6f3f8f6f2f8f7f4f9f6f3f9f6f2f8f6f3f8f7f4f9f0ebf5eee9f3f1edf5efeaf4f3eff7f5f2f8f6f3f9f7f4f9f6f3f9f6f3f8f6f2f8f5f1f7f3f0f7f5f2f8f3f0f7f6f3f8f6f3f8f7f4f9f7f4f9f6f3f9f7f4f9f7f4f9f5f2f8f5f1f8f5f1f8f4f1f7f2eef6f0ecf5f5f1f8f5f2f8f6f3f8f7f4f9f7f4f9f6f3f9f6f3f8f5f1f8f1edf6f1edf5f2eef6f0ecf5f1edf5f6f3f8f6f3f8f7f4f9f6f3f9f4f1f7f3eff7f5f2f8f6f2f8f4f0f7f3eff7f4f1f7f4f0f7f6f3f8f7f4f9f6f3f9f7f4f9f7f4f9f7f4f9f7f4f9f6f3f8f4f1f7f5f2f8f6f3f8f5f1f8f6f3f8f6f3f8f6f3f9f6f3f8f6f3f9f7f4f9f6f3f9f6f3f8f6f3f8f6f3f8f7f4f9f6f3f9f7f4f9f7f4f9f7f4f9f7f4f9f7f4f9f7f4f9f6f3f9f2eff6f3eff6f3f0f7f6f3f9f6f3f8f6f3f8f7f4f9f7f4f9f7f4f9f7f4f9f6f3f9f6f3f8e8e2f0e3d9ebebe6f1eeeaf4f4f0f7f6f2f8f6f3f8f7f4f9f6f2f8f6f3f8f6f3f9f5f1f8f7f4f9f6f3f9f5f2f8f5f2f8f5f2f8f5f2f8f7f4f9f7f4f9f7f4f9f6f3f8f6f3f9f5f1f7>
+grestore
+0.2000 0.2000 0.2000 srgb
+1 setlinecap
+343.73 134.22 94.60 79.62 r p1
+0.00 0.00 708.66 850.39 cl
+443.81 645.77 538.41 725.39 cl
+/bg { 1 1 1 srgb } def
+443.81 645.77 94.60 79.62 r p2
+0.9216 0.9216 0.9216 srgb
+0.53 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+443.81 657.01 m
+94.60 0 l
+o
+np
+443.81 676.06 m
+94.60 0 l
+o
+np
+443.81 695.11 m
+94.60 0 l
+o
+np
+443.81 714.16 m
+94.60 0 l
+o
+np
+462.44 645.77 m
+0 79.62 l
+o
+np
+483.94 645.77 m
+0 79.62 l
+o
+np
+505.44 645.77 m
+0 79.62 l
+o
+np
+526.94 645.77 m
+0 79.62 l
+o
+np
+537.69 645.77 m
+0 79.62 l
+o
+1.07 setlinewidth
+[] 0 setdash
+np
+443.81 647.49 m
+94.60 0 l
+o
+np
+443.81 666.54 m
+94.60 0 l
+o
+np
+443.81 685.58 m
+94.60 0 l
+o
+np
+443.81 704.63 m
+94.60 0 l
+o
+np
+443.81 723.68 m
+94.60 0 l
+o
+np
+451.69 645.77 m
+0 79.62 l
+o
+np
+473.19 645.77 m
+0 79.62 l
+o
+np
+494.69 645.77 m
+0 79.62 l
+o
+np
+516.19 645.77 m
+0 79.62 l
+o
+gsave
+448.11 649.39 translate
+86.00 72.38 scale
+8 dict dup begin
+  /ImageType 1 def
+  /Width 12 def
+  /Height 19 def
+  /BitsPerComponent 8 def
+  /Decode [0 1 0 1 0 1] def
+  /DataSource currentfile /ASCIIHexDecode filter def
+  /ImageMatrix [12 0 0 -19 0 19] def
+end
+image
+dac5e0cfa7d1cf8ac2dd6bb3e060acdd6bb2d67cbacd8ec4cfa6d0d7bfddd6bddcdbc8e2dbc8e2d4b8dacfa9d2cda1ced5badbd6bddcdbc7e2dcc9e2e2d7eae6deeeebe6f1e8e2f0da74b7e353a2e52786d71b68e6338edd6ab2cc90c5d1add4d7bfdddbc8e2dac5e0d6bddcce8bc2df65b0e44a9bdf2278db1e6fe72a8ae44c9ddd6cb3cc8fc4ca97c8d480bccb9bcbd57ebbdd6bb3e63690db1e70ce1256d91c6be63e94e060accf8ac2cfa9d2d1add4cfa6d0cd8dc3d089c1d383beda72b5e259a7e15aa7e061add67cbac994c7cda2cecda0cdc995c7cb9acad383bede67b1e4499be44799e44d9de3509fe05fabcc90c5d0a9d2cfa7d1d3b6d9d779b9dd6cb3e54598db1e6fb70a4ee6338ed67bbacea3cfd5badbd9c3dfd6bcdcd3b6d8e63c93e1247cd31761cf1358e0237ae05fabcd8ec4cda0cdd0acd3d2b0d5d2b3d7cda1cdcc9fcccf89c1d67dbbd186c0da72b6d779b9d57fbcd087c0cf89c1d57dbbda72b5df64afd0aad2cd8dc3df64afca98c9d1aed4d6bedde1d4e8e6dfeee6dfeee0d3e8d8c1ded5bbdbdb6fb4e34f9fe72c8bd1155cd41863e4479aca98c9d2b2d6d8c1dedccae3dbc8e2d3b7d9d77ab9df66b1e15ba7e63c93e6338ee63d93e257a5db71b5cf8ac2ce8bc2c994c7cb9bcbca98c9ca92c6d77abae062aee63690e6358fe4499bdf66b0c994c7cda1cecb9bcad2b3d7cc8fc4d285bfcd8ec4ce8cc3dd6ab2e354a2e7308de54195dd6cb3ca96c8ca99c9cea4cfd5bbdbcfa6d0d2b3d7dbc8e2d8c0ded2b3d7d4badad4b9dadecee5e1d4e8e2d6e9e8e2f0dc6db3e54095e6338ee72c8be62887e44b9cd67dbbcda0cdd2b3d7d2b1d6d1aed5d5bbdbd67bbae3509fe44d9edd69b2d67dbbd187c0ce8cc2ca92c6cfa8d1cd9fcdca98c9cea3cfd975b7e354a2e63c93e54095e62889e54498de69b2d67cbbce8bc2d67dbbcf8ac2cc9fcd>
+grestore
+0.2000 0.2000 0.2000 srgb
+1 setlinecap
+443.81 645.77 94.60 79.62 r p1
+0.00 0.00 708.66 850.39 cl
+443.81 543.46 538.41 623.08 cl
+/bg { 1 1 1 srgb } def
+443.81 543.46 94.60 79.62 r p2
+0.9216 0.9216 0.9216 srgb
+0.53 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+443.81 554.70 m
+94.60 0 l
+o
+np
+443.81 573.75 m
+94.60 0 l
+o
+np
+443.81 592.80 m
+94.60 0 l
+o
+np
+443.81 611.85 m
+94.60 0 l
+o
+np
+462.44 543.46 m
+0 79.62 l
+o
+np
+483.94 543.46 m
+0 79.62 l
+o
+np
+505.44 543.46 m
+0 79.62 l
+o
+np
+526.94 543.46 m
+0 79.62 l
+o
+np
+537.69 543.46 m
+0 79.62 l
+o
+1.07 setlinewidth
+[] 0 setdash
+np
+443.81 545.18 m
+94.60 0 l
+o
+np
+443.81 564.23 m
+94.60 0 l
+o
+np
+443.81 583.27 m
+94.60 0 l
+o
+np
+443.81 602.32 m
+94.60 0 l
+o
+np
+443.81 621.37 m
+94.60 0 l
+o
+np
+451.69 543.46 m
+0 79.62 l
+o
+np
+473.19 543.46 m
+0 79.62 l
+o
+np
+494.69 543.46 m
+0 79.62 l
+o
+np
+516.19 543.46 m
+0 79.62 l
+o
+gsave
+448.11 547.08 translate
+86.00 72.38 scale
+8 dict dup begin
+  /ImageType 1 def
+  /Width 12 def
+  /Height 19 def
+  /BitsPerComponent 8 def
+  /Decode [0 1 0 1 0 1] def
+  /DataSource currentfile /ASCIIHexDecode filter def
+  /ImageMatrix [12 0 0 -19 0 19] def
+end
+image
+cda0cdce8cc3de67b1e63991e0237be72f8ce54497e353a1dd6bb3ce8bc2cb9acad1aed4d1aed4cb9ccbd284bfe44b9ce63891e256a4db6fb4d284bfcfa8d1cfa7d1cea5cfd0acd3d4b9dad1afd5cb9bcacea4cfcda2cecda2cecda1cecb9acacfa8d1cfa7d1d1add4d6bedddc2073d1155bc10d52d41862e0227ae44799d67dbbd1aed4dccae3e0d2e7e2d6e9d6bedcca93c6d088c1e54196e1247ed51965e6348fe353a2d480bccc9ccbd2b2d7d088c1e62888cda0cdcb9acac994c7d283bedc6fb4d383becb90c5cfa6d0d1afd5d1afd5d4b9dad4b7d9ca97c9d877b8df63afe3509fe54397e353a2e15aa7de69b2d088c0cb99c9d0acd3d2b4d7dbc8e2d3b5d8d284bee256a4e44d9ede68b1db71b5d878b9cc9dccd2b1d6dac5e1dac5e0d57fbce15aa7e6338ee54498e257a5db71b5c994c7d2b1d6d8c1dedfd0e6eae4f1decfe5decee5d2b1d6cb9bcbcb99c9d779b9da74b7da72b6d089c1ca93c6cb9bcbcc9ecccfa9d2e8e2f0e5deeddcc9e2dbc8e2dccbe3ddcbe3e0d3e7e7e1efe8e2f0eae4f1e0d3e7e0d2e7cb9ccbdd6ab2e257a4e6328edd6ab2cb9bcbd8c2dfdfd0e6e4dbece9e4f0ece7f2e8e2efcea4cfd77bbae351a0e63e94e351a0d974b7dd6cb3d284becda2cecda1cecda2cecfa8d1d1afd5d3b4d7cd9fcdca97c8cea4cfcea3cfcea3cfcfa9d2d3b6d9d3b7d9d7c0ded9c4e0d6bddccc9fcdd975b7e15ca8dd6ab2d285bfca92c6cc9fccd1add4dac4e0dccae3dac5e1d9c3dfd0abd3d2b1d6d8c1ded5bcdbd8c0dedccbe3decfe5eae4f1e8e2f0eee9f3efeaf4dd6ab2e259a7e63991e72f8ce6348fdc6eb4d186bfcb9bcad2b2d6d2b2d6d5bcdbd4b8dada73b6e63a92d91d6cde2177e6328edf64b0db70b5d285bfcea5d0cea5d0d089c1cb91c6e8e2f0cea5d0d57fbce52786d91c6be54095e15ba8dd6bb3d383bec995c8ca96c8d2b3d7>
+grestore
+0.2000 0.2000 0.2000 srgb
+1 setlinecap
+443.81 543.46 94.60 79.62 r p1
+0.00 0.00 708.66 850.39 cl
+443.81 441.15 538.41 520.77 cl
+/bg { 1 1 1 srgb } def
+443.81 441.15 94.60 79.62 r p2
+0.9216 0.9216 0.9216 srgb
+0.53 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+443.81 452.39 m
+94.60 0 l
+o
+np
+443.81 471.44 m
+94.60 0 l
+o
+np
+443.81 490.49 m
+94.60 0 l
+o
+np
+443.81 509.54 m
+94.60 0 l
+o
+np
+462.44 441.15 m
+0 79.62 l
+o
+np
+483.94 441.15 m
+0 79.62 l
+o
+np
+505.44 441.15 m
+0 79.62 l
+o
+np
+526.94 441.15 m
+0 79.62 l
+o
+np
+537.69 441.15 m
+0 79.62 l
+o
+1.07 setlinewidth
+[] 0 setdash
+np
+443.81 442.87 m
+94.60 0 l
+o
+np
+443.81 461.91 m
+94.60 0 l
+o
+np
+443.81 480.96 m
+94.60 0 l
+o
+np
+443.81 500.01 m
+94.60 0 l
+o
+np
+443.81 519.06 m
+94.60 0 l
+o
+np
+451.69 441.15 m
+0 79.62 l
+o
+np
+473.19 441.15 m
+0 79.62 l
+o
+np
+494.69 441.15 m
+0 79.62 l
+o
+np
+516.19 441.15 m
+0 79.62 l
+o
+gsave
+448.11 444.77 translate
+86.00 72.38 scale
+8 dict dup begin
+  /ImageType 1 def
+  /Width 12 def
+  /Height 19 def
+  /BitsPerComponent 8 def
+  /Decode [0 1 0 1 0 1] def
+  /DataSource currentfile /ASCIIHexDecode filter def
+  /ImageMatrix [12 0 0 -19 0 19] def
+end
+image
+cfa6d0d088c0da72b6e44d9de2257fe54397e25aa7e060acdd6bb3d779b9c994c7cfa8d1d3b6d8d0add4cb91c5d57ebbcd8dc3cb99cacda0cdcea4cfd2b2d7d0a9d2d0aad2d1b0d5d3b4d8d4b9dacfa9d2cea4cfc995c7ca97c8cfa7d0d0abd3d3b7d9d6bedcd9c3dfd7bfddce1256c91054de2177e353a1d879b9ce8cc2cb99cacc9eccd1afd5d2b0d6d1add4d77ab9dd6cb3e353a2d2165dc10d51d41862e53e94dc6cb3db71b5e15ba7e54497d3175fd41861d7bfddd3b5d8cc9eccd089c1d77abace8cc2cd9fcdd3b5d8d6bcdcd3b6d8d0abd3cea5d0ddcce4d7beddcfa7d1cb90c5ce8bc2cda0cdd1b0d5d3b5d8d9c4e0dac5e0ddcce4e3d8eae15ba8e54296e52785e6358fe05fabd088c1cb91c6d1b0d5dccae3dccae3dbc8e2d1aed5cea3cfd187c0de68b1df65b0dd6ab2d383beca97c8cfa6d0d0acd3d0aad2d3b5d8decee5d6bddcca93c7dc6db3df63aee7308de62889e63a92e15eaaca93c6d0acd3d0acd3d2b1d6e7e0efe2d7ead7c0ded8c1ded4b9dad5badbd9c4e0dfd1e6eae5f1e8e2f0e0d3e8e0d3e8d0acd3ca98c9de69b2e7308de44799d382bdcfa8d1dac6e1e5ddede8e2f0e8e2f0e8e2f0cda0cdcf89c1e05fabe53f95e54397e061add57dbbcfa8d1d6bedcd5bbdbd7c0ded5bbdbd4b9dad6bddccd9fcdcc90c5d779b9cf8ac1cb9acacfa8d1d8c1dedfcfe6ddcce4ddcbe3ebe6f2e5ddeddac6e1ce8cc3ce8cc3cea4cfd0abd3d7bfdddcc9e3e2d6e9e2d6e9e8e2efdbc7e1d1afd5d3b4d7dac5e0e0d3e7e3d8eae6dfeee9e3f0ede8f3ede8f3ede8f3ede9f3cea5cfd480bce255a3e254a3e062aece8bc2d0acd3d6bedde2d7eae5ddede2d5e9ddcbe4de2175a002469e0145d2165fe4489ad285bfcb99cad1aed4d4b9dad2b2d7d2b0d6d1aed5cb9acac994c7ce8bc2da73b6dc6db3d383becd8dc3cc9ccbd1b0d5d1afd5cea5d0d3b4d7>
+grestore
+0.2000 0.2000 0.2000 srgb
+1 setlinecap
+443.81 441.15 94.60 79.62 r p1
+0.00 0.00 708.66 850.39 cl
+443.81 338.84 538.41 418.46 cl
+/bg { 1 1 1 srgb } def
+443.81 338.84 94.60 79.62 r p2
+0.9216 0.9216 0.9216 srgb
+0.53 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+443.81 350.08 m
+94.60 0 l
+o
+np
+443.81 369.13 m
+94.60 0 l
+o
+np
+443.81 388.18 m
+94.60 0 l
+o
+np
+443.81 407.23 m
+94.60 0 l
+o
+np
+462.44 338.84 m
+0 79.62 l
+o
+np
+483.94 338.84 m
+0 79.62 l
+o
+np
+505.44 338.84 m
+0 79.62 l
+o
+np
+526.94 338.84 m
+0 79.62 l
+o
+np
+537.69 338.84 m
+0 79.62 l
+o
+1.07 setlinewidth
+[] 0 setdash
+np
+443.81 340.56 m
+94.60 0 l
+o
+np
+443.81 359.60 m
+94.60 0 l
+o
+np
+443.81 378.65 m
+94.60 0 l
+o
+np
+443.81 397.70 m
+94.60 0 l
+o
+np
+443.81 416.75 m
+94.60 0 l
+o
+np
+451.69 338.84 m
+0 79.62 l
+o
+np
+473.19 338.84 m
+0 79.62 l
+o
+np
+494.69 338.84 m
+0 79.62 l
+o
+np
+516.19 338.84 m
+0 79.62 l
+o
+gsave
+448.11 342.46 translate
+86.00 72.38 scale
+8 dict dup begin
+  /ImageType 1 def
+  /Width 12 def
+  /Height 19 def
+  /BitsPerComponent 8 def
+  /Decode [0 1 0 1 0 1] def
+  /DataSource currentfile /ASCIIHexDecode filter def
+  /ImageMatrix [12 0 0 -19 0 19] def
+end
+image
+ece7f2ebe5f1dfd0e6d0acd3db6fb5e34e9ee72e8ce44c9ddd6bb2cf8ac2cea4cfdac5e0f0ecf5f1edf5ebe6f2e9e3f0e3d9ebece7f2ece7f2ebe5f1efeaf4ebe5f1ebe5f1efebf4d8c2dfe8e2efdccae3dac5e0d9c4e0e3d8eae8e3f0e6dfeee0d1e7e5dcece6deedede8f3d383bee44d9dd878b8cf8ac2d0aad2d6bcdcd1aed4cfa9d2d4badad2b3d7d6bcdcd3b5d8cc90c5d284bee258a6e15ba8d57ebbd1afd5d2b2d6dc6eb4e53e94e34f9fe42784e15eaae3d9ebe1d5e8d3b4d7ca96c8db71b5ce8cc2cb9ccbd2b2d7d4b9dad5badbd2b1d6d3b6d8e8e3f0e1d4e8e2d7ead9c4e0d1aed4d4b8d9decee5e2d6e9e3d8eadccae3dac5e0e0d3e8d57fbcdb70b5e062ade353a2df65b0d383becc8fc4cfa7d1d4b9dad7bedde3d8eadccae3d4badacfa9d2ca98c9ce8bc2d382bdcd8dc3cc8fc4cda2ced1b0d5d1b0d5d8c1dee3d8eaf2eef6f2eef6eae5f1e1d4e8d7c0dedfd0e6ddcce4d7c0dedfd0e6decee5dccae3decee5d3b7d9d1afd5db71b5d382bdce8cc3d1add4d9c4e0dbc7e1e0d1e7ebe6f1e9e3f0eae5f1d876b8de67b1de2177a20346a20347e72c8bcda0cddecee5e4daebdcc9e2d2b2d6d0acd3e0d2e7e2d7ead5badbcb99c9d4b8dacea3cfca96c8d0acd3d3b5d8dac4e0d4b9dad1afd5dfd1e6ddcce4d4badacea3ceca96c8d1afd5d6bddcdecde5dfcfe6d9c4e0d6bcdce0d2e7efeaf4e9e4f0dbc7e1ddcbe4d8c1ded2b1d6d3b4d8decfe5e5dcece6dfeedecee5e5dcecdbc8e2dac5e1dac5e0e1d4e8e0d2e7e1d4e8e6dfeee8e3f0e8e2eff0ecf5eee9f3e8e3f0d67cbadf66b0e255a3e354a2e15aa7dd6bb2ce8cc3cda0cdd3b5d8d4b9dad6bddcd3b6d8ca92c6db6fb4e44c9de34e9edf65b0de68b1d976b8ce8cc2cb9bcacda1cdca98c9d0abd3c995c8ca96c8d47fbcdc6fb4e256a4dd6cb3d187c0cb99cad3b6d8d1afd5d3b6d8dfd0e6>
+grestore
+0.2000 0.2000 0.2000 srgb
+1 setlinecap
+443.81 338.84 94.60 79.62 r p1
+0.00 0.00 708.66 850.39 cl
+443.81 236.53 538.41 316.15 cl
+/bg { 1 1 1 srgb } def
+443.81 236.53 94.60 79.62 r p2
+0.9216 0.9216 0.9216 srgb
+0.53 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+443.81 247.77 m
+94.60 0 l
+o
+np
+443.81 266.82 m
+94.60 0 l
+o
+np
+443.81 285.87 m
+94.60 0 l
+o
+np
+443.81 304.91 m
+94.60 0 l
+o
+np
+462.44 236.53 m
+0 79.62 l
+o
+np
+483.94 236.53 m
+0 79.62 l
+o
+np
+505.44 236.53 m
+0 79.62 l
+o
+np
+526.94 236.53 m
+0 79.62 l
+o
+np
+537.69 236.53 m
+0 79.62 l
+o
+1.07 setlinewidth
+[] 0 setdash
+np
+443.81 238.25 m
+94.60 0 l
+o
+np
+443.81 257.29 m
+94.60 0 l
+o
+np
+443.81 276.34 m
+94.60 0 l
+o
+np
+443.81 295.39 m
+94.60 0 l
+o
+np
+443.81 314.44 m
+94.60 0 l
+o
+np
+451.69 236.53 m
+0 79.62 l
+o
+np
+473.19 236.53 m
+0 79.62 l
+o
+np
+494.69 236.53 m
+0 79.62 l
+o
+np
+516.19 236.53 m
+0 79.62 l
+o
+gsave
+448.11 240.15 translate
+86.00 72.38 scale
+8 dict dup begin
+  /ImageType 1 def
+  /Width 12 def
+  /Height 19 def
+  /BitsPerComponent 8 def
+  /Decode [0 1 0 1 0 1] def
+  /DataSource currentfile /ASCIIHexDecode filter def
+  /ImageMatrix [12 0 0 -19 0 19] def
+end
+image
+e72c8be2257fd0145ac30e52aa0549b5094dd41862e63991e15ba8df65b0e062ade4489acb9ccbc995c8db71b5e062addf64afdc6eb4d878b8d088c1c995c8ca92c6ce8bc2dd6cb3dd6bb2d284bedf65b0d57fbcd382beca97c9d0add4d1aed4d4badad3b5d8d3b6d9cc9dccb90b4fb90a4fc10d51d61a66e257a5ce8cc2cc9ecccea3cfcfa8d1cea4cfce8cc3e354a2d974b7cf8ac1e062aee63c93df2279e32682e6338fe63891e53e94e32581de2177d41862e6358fe44a9ce54296e63c93e63d93e44e9ee062add877b8d57dbbcc90c5cf89c1d779b9d1155cba0b4f9d0145a90549c40f53e0237ce44b9cdd6ab2d67bbad089c1ce8bc2d77ab9da73b6d67bbadb71b5de69b2db6fb4db71b5d878b9ce8bc2cf8ac1d47fbcda74b6e54296e72f8cdc1f72d31761cd1256c91054e62887df65b0ce8cc2d1add4cfa8d1d1afd5d0aad2d481bdde69b2e62888dd2074d81b69e72c8be352a1e061add382bdd186bfdf65b0e354a2e52785d31760c30e52c70f53c00d51e42683db71b5cc90c5d4b8daddcbe4cfa7d1d480bdcb91c5dd6bb2d81b69bf0d51d41862e54397cf8ac1cd9fcdd3b5d8cda2ced57dbbe060acd088c1db71b5df66b0e352a1df64afcf8ac1c994c7d6bcdcdbc7e1ddcbe3d6bedcd3b7d9c995c7de68b1e44d9de63790e7318dd976b7cc9ccbd2b3d7decee5dccae3d8c0dedac6e1d5bbdbcc9dcccc8fc5cb91c5cd8dc3cda1ced8c0dedfd0e6e7e1efe0d2e7e8e2f0ebe6f2cda0cdcd8dc3dc6db4d382bed089c1d2b0d5d9c3dfe3d9ebece7f2ede8f3eae5f1e0d3e8e52784b1074cb2084ce1247de352a1d779b9d0abd3e0d2e7e0d3e8ddcce4d9c3dfcfa8d1e44799cb1155b90a4fde2176e44b9cda72b6ca93c6cda1ced0acd3cfa9d2c993c7d383bedc6eb4e15daae257a5e256a4e063aed57fbccb91c5d3b4d7dbc7e1dbc8e2d5bbdbd6bddc>
+grestore
+0.2000 0.2000 0.2000 srgb
+1 setlinecap
+443.81 236.53 94.60 79.62 r p1
+0.00 0.00 708.66 850.39 cl
+543.89 543.46 638.49 623.08 cl
+/bg { 1 1 1 srgb } def
+543.89 543.46 94.60 79.62 r p2
+0.9216 0.9216 0.9216 srgb
+0.53 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+543.89 554.70 m
+94.60 0 l
+o
+np
+543.89 573.75 m
+94.60 0 l
+o
+np
+543.89 592.80 m
+94.60 0 l
+o
+np
+543.89 611.85 m
+94.60 0 l
+o
+np
+562.52 543.46 m
+0 79.62 l
+o
+np
+584.02 543.46 m
+0 79.62 l
+o
+np
+605.52 543.46 m
+0 79.62 l
+o
+np
+627.02 543.46 m
+0 79.62 l
+o
+np
+637.77 543.46 m
+0 79.62 l
+o
+1.07 setlinewidth
+[] 0 setdash
+np
+543.89 545.18 m
+94.60 0 l
+o
+np
+543.89 564.23 m
+94.60 0 l
+o
+np
+543.89 583.27 m
+94.60 0 l
+o
+np
+543.89 602.32 m
+94.60 0 l
+o
+np
+543.89 621.37 m
+94.60 0 l
+o
+np
+551.77 543.46 m
+0 79.62 l
+o
+np
+573.27 543.46 m
+0 79.62 l
+o
+np
+594.77 543.46 m
+0 79.62 l
+o
+np
+616.27 543.46 m
+0 79.62 l
+o
+gsave
+548.19 547.08 translate
+86.00 72.38 scale
+8 dict dup begin
+  /ImageType 1 def
+  /Width 12 def
+  /Height 19 def
+  /BitsPerComponent 8 def
+  /Decode [0 1 0 1 0 1] def
+  /DataSource currentfile /ASCIIHexDecode filter def
+  /ImageMatrix [12 0 0 -19 0 19] def
+end
+image
+ce8cc3d284bee257a5d91d6ccc1155d1155bd71b68e52785e352a1d976b8c993c7ca98c9cb9acad77bbae53f95da1e6fda1e6edf2278e72989e54498dd69b2d67dbbd088c1cb91c5cc8fc4cf89c1e061acdc6eb4d480bcd285bfcb91c5d284beca92c6ca96c8ca97c9cc9eccdc1f7192003e92003fc81054dd2175e54196de69b2cf8ac1cc9eccd1aed4d0acd3cc9dcce352a1e7308dd1155dcf1358e52785db71b5cb90c5cfa6d0d2b1d6cfa8d1cc9ccbd779b9d088c1dc6eb4de68b1e15ba7e63991e15ca9de68b1d57fbccc8fc4cf8bc2d285bfd283bede67b1e063aee34f9fe6348fe6348fe54397e4479ae352a1da73b6d185bfd57ebbcc9dcce060ace4499bdd2074ce1257d1155ce32581e63b92e15da9cf89c1cb9bcaca97c8cb91c5df63afe63790d81c6bd81b69de2176e72e8ce15eaad57fbccd9fcdcda2cedecde4dccae3dbc8e2dac6e1d1b0d5cc9fcdd382bddc6cb3e15ba8de69b2d57ebbd57fbcd481bdd284bed1add4cfa7d1d57fbccb91c5cda2ced4b7d9d9c3dfd7c0dedecee5dac5e0d4b9dad3b6d8e63c93e52785da1e6ec40e52c00d51e32581df63aecd8dc3d1afd5d3b4d8d1afd5cb90c5d089c1d67dbbe354a2e34e9ee352a1e44d9de54297e15ca9db6fb4db6fb4d779b9db71b5d1afd5cea4cfca93c7d779b9e15daae63b92e54296dd6cb3ca93c6d1afd5d1add4d5bcdbcea4cfcb9bcad57fbcd480bcd77ab9d187c0d087c0d185bfcc9dccd1aed4d4b9dad8c2dfcda0cdcda0cdca92c6cc9ccbcc9eccd0abd3cfa9d2cfa6d0dbc7e1e2d7ead6beddd3b7d9e062ade63991dd2073d61a65d1155be0237adf66b0ca97c9d1add4d4badad4b8dacda0cde53f95e0237ace1257d91d6ce63891e259a6e15ba8df66b1d976b7d975b7d77ab9d481bde6358fd81c6bc91054d0145bc20e52d2165ed91c6be7298ae15ca8de67b1d878b9d089c1>
+grestore
+0.2000 0.2000 0.2000 srgb
+1 setlinecap
+543.89 543.46 94.60 79.62 r p1
+0.00 0.00 708.66 850.39 cl
+543.89 441.15 638.49 520.77 cl
+/bg { 1 1 1 srgb } def
+543.89 441.15 94.60 79.62 r p2
+0.9216 0.9216 0.9216 srgb
+0.53 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+543.89 452.39 m
+94.60 0 l
+o
+np
+543.89 471.44 m
+94.60 0 l
+o
+np
+543.89 490.49 m
+94.60 0 l
+o
+np
+543.89 509.54 m
+94.60 0 l
+o
+np
+562.52 441.15 m
+0 79.62 l
+o
+np
+584.02 441.15 m
+0 79.62 l
+o
+np
+605.52 441.15 m
+0 79.62 l
+o
+np
+627.02 441.15 m
+0 79.62 l
+o
+np
+637.77 441.15 m
+0 79.62 l
+o
+1.07 setlinewidth
+[] 0 setdash
+np
+543.89 442.87 m
+94.60 0 l
+o
+np
+543.89 461.91 m
+94.60 0 l
+o
+np
+543.89 480.96 m
+94.60 0 l
+o
+np
+543.89 500.01 m
+94.60 0 l
+o
+np
+543.89 519.06 m
+94.60 0 l
+o
+np
+551.77 441.15 m
+0 79.62 l
+o
+np
+573.27 441.15 m
+0 79.62 l
+o
+np
+594.77 441.15 m
+0 79.62 l
+o
+np
+616.27 441.15 m
+0 79.62 l
+o
+gsave
+548.19 444.77 translate
+86.00 72.38 scale
+8 dict dup begin
+  /ImageType 1 def
+  /Width 12 def
+  /Height 19 def
+  /BitsPerComponent 8 def
+  /Decode [0 1 0 1 0 1] def
+  /DataSource currentfile /ASCIIHexDecode filter def
+  /ImageMatrix [12 0 0 -19 0 19] def
+end
+image
+cb9bcbd088c1db70b5e54598d71b68d61a66dc1f71e6348fe257a5d57fbcd0aad2d4badad4b9dad8c1ded7beddd2b3d7cc9fcdcea5d0d1aed4d2b0d6d7bfddd5bcdbd6bedcd6beddd5bbdbd6beddd0abd3cd9fcdcc8fc4ce8cc3cea4cfd1aed4d4b9dad6bddcd7beddddcce4e7298ae2257fde2176e72989e54095e15ba7db70b5d088c1cb99cad1add4d2b2d7e15ca9dc6eb4de67b1e44c9de72b8bdf2177e52784e6328ee354a3e44e9ee7308dda1d6de54498d283bed47fbcdb71b5df66b0e54598e54095e54297e353a1dc6db3d67bbad088c1cd8ec4cfa7d1cb9bcbd383bedd6cb3e63a92e44d9edd6ab2d975b7d975b7d57fbcd77ab9ce8bc2e257a5e44e9ede2177d2165dd31760e32682e52886e63d93e15daad186bfcf8ac1cf8bc2d088c0dc6cb3e352a1e15da9df64afd77ab9ca96c8cb9ccbca97c8cfa6d0d4badadac5e0cf8bc2e44d9dc50f53ba0b4fbd0c50c91054d41862e1247de54095e256a4df65b0cf89c1cfa8d1cea5cfd47fbcce8cc3d382bdd1aed4d1afd5c995c8cda2cecda2ced0a9d2d2b3d7cb91c5cc90c5df64afd91d6cdd2075e15ca8da74b7ca96c8ca96c8cfa8d1d0aad2d0abd3cea5d0cfa7d1d57ebbda72b6e34f9fe44b9ce53f95e351a0d878b8d480bcd185bfcc8fc4d1b0d5d1aed4d4b9dad5bbdbcea3cfcc9ccbcf8bc2cf8ac1cda2cecea6d0d0abd3d3b5d8decde5cb9ccbcea3cfcda0cdc994c7cda0cdcda2cecfa8d1d2b3d7d4badad9c2dfdfcfe5d1afd5cc9ccbd57fbcdb70b5dd6bb3cc8fc4ca96c8cfa7d1d3b4d7cea5d0d3b5d8dac5e0d3b5d8cda1ceca98c9d57ebbe353a2e353a2dd6ab2cb99cacea4cfcea3cfd0a9d2d6bddccd9fcde05fabe7308de44b9cde68b1d186c0c994c7d0a9d2d4b7d9d9c4e0d5bbdbd4b8d9d2b3d7d1add4da73b6cc9ccbd6bddcdccae3ddcce4dccbe3ddcde4e0d2e7e4dcece9e4f0>
+grestore
+0.2000 0.2000 0.2000 srgb
+1 setlinecap
+543.89 441.15 94.60 79.62 r p1
+0.00 0.00 708.66 850.39 cl
+243.65 111.53 338.25 128.74 cl
+243.65 111.53 338.25 128.74 cl
+/bg { 0.8510 0.8510 0.8510 srgb } def
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+1 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+243.65 111.53 94.60 17.21 r p3
+/Font1 findfont 9 s
+0.1020 0.1020 0.1020 srgb
+253.93 116.91 (Rio Gr) 0 ta
+-0.090 (ande do Sul) tb gr
+243.65 111.53 338.25 128.74 cl
+243.65 111.53 338.25 128.74 cl
+0.00 0.00 708.66 850.39 cl
+243.65 213.84 338.25 231.05 cl
+243.65 213.84 338.25 231.05 cl
+/bg { 0.8510 0.8510 0.8510 srgb } def
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+1 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+243.65 213.84 94.60 17.21 r p3
+/Font1 findfont 9 s
+0.1020 0.1020 0.1020 srgb
+276.44 219.22 (P) 0 ta
+-0.360 (ar) tb
+-0.090 (aná) tb gr
+243.65 213.84 338.25 231.05 cl
+243.65 213.84 338.25 231.05 cl
+0.00 0.00 708.66 850.39 cl
+343.73 213.84 438.33 231.05 cl
+343.73 213.84 438.33 231.05 cl
+/bg { 0.8510 0.8510 0.8510 srgb } def
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+1 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+343.73 213.84 94.60 17.21 r p3
+/Font1 findfont 9 s
+0.1020 0.1020 0.1020 srgb
+361.01 219.22 (Santa Catar) 0 ta
+0.135 (ina) tb gr
+343.73 213.84 438.33 231.05 cl
+343.73 213.84 438.33 231.05 cl
+0.00 0.00 708.66 850.39 cl
+243.65 316.15 338.25 333.36 cl
+243.65 316.15 338.25 333.36 cl
+/bg { 0.8510 0.8510 0.8510 srgb } def
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+1 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+243.65 316.15 94.60 17.21 r p3
+/Font1 findfont 9 s
+0.1020 0.1020 0.1020 srgb
+270.18 321.53 (São P) 0 ta
+-0.360 (aulo) tb gr
+243.65 316.15 338.25 333.36 cl
+243.65 316.15 338.25 333.36 cl
+0.00 0.00 708.66 850.39 cl
+343.73 316.15 438.33 333.36 cl
+343.73 316.15 438.33 333.36 cl
+/bg { 0.8510 0.8510 0.8510 srgb } def
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+1 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+343.73 316.15 94.60 17.21 r p3
+/Font1 findfont 9 s
+0.1020 0.1020 0.1020 srgb
+362.02 321.53 (Rio de J) 0 ta
+-0.180 (aneiro) tb gr
+343.73 316.15 438.33 333.36 cl
+343.73 316.15 438.33 333.36 cl
+0.00 0.00 708.66 850.39 cl
+443.81 316.15 538.41 333.36 cl
+443.81 316.15 538.41 333.36 cl
+/bg { 0.8510 0.8510 0.8510 srgb } def
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+1 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+443.81 316.15 94.60 17.21 r p3
+/Font1 findfont 9 s
+0.1020 0.1020 0.1020 srgb
+462.84 321.53 (Espír) 0 ta
+0.135 (ito Santo) tb gr
+443.81 316.15 538.41 333.36 cl
+443.81 316.15 538.41 333.36 cl
+0.00 0.00 708.66 850.39 cl
+143.57 418.46 238.17 435.67 cl
+143.57 418.46 238.17 435.67 cl
+/bg { 0.8510 0.8510 0.8510 srgb } def
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+1 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+143.57 418.46 94.60 17.21 r p3
+/Font1 findfont 9 s
+0.1020 0.1020 0.1020 srgb
+190.87 423.84 (Mato Grosso do Sul) .5 0 t
+143.57 418.46 238.17 435.67 cl
+143.57 418.46 238.17 435.67 cl
+0.00 0.00 708.66 850.39 cl
+243.65 418.46 338.25 435.67 cl
+243.65 418.46 338.25 435.67 cl
+/bg { 0.8510 0.8510 0.8510 srgb } def
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+1 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+243.65 418.46 94.60 17.21 r p3
+/Font1 findfont 9 s
+0.1020 0.1020 0.1020 srgb
+260.44 423.84 (Distr) 0 ta
+0.135 (ito F) tb
+-0.270 (eder) tb
+-0.090 (al) tb gr
+243.65 418.46 338.25 435.67 cl
+243.65 418.46 338.25 435.67 cl
+0.00 0.00 708.66 850.39 cl
+343.73 418.46 438.33 435.67 cl
+343.73 418.46 438.33 435.67 cl
+/bg { 0.8510 0.8510 0.8510 srgb } def
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+1 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+343.73 418.46 94.60 17.21 r p3
+/Font1 findfont 9 s
+0.1020 0.1020 0.1020 srgb
+364.52 423.84 (Minas Ger) 0 ta
+-0.090 (ais) tb gr
+343.73 418.46 438.33 435.67 cl
+343.73 418.46 438.33 435.67 cl
+0.00 0.00 708.66 850.39 cl
+443.81 418.46 538.41 435.67 cl
+443.81 418.46 538.41 435.67 cl
+/bg { 0.8510 0.8510 0.8510 srgb } def
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+1 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+443.81 418.46 94.60 17.21 r p3
+/Font1 findfont 9 s
+0.1020 0.1020 0.1020 srgb
+491.11 423.84 (Sergipe) .5 0 t
+443.81 418.46 538.41 435.67 cl
+443.81 418.46 538.41 435.67 cl
+0.00 0.00 708.66 850.39 cl
+143.57 520.77 238.17 537.98 cl
+143.57 520.77 238.17 537.98 cl
+/bg { 0.8510 0.8510 0.8510 srgb } def
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+1 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+143.57 520.77 94.60 17.21 r p3
+/Font1 findfont 9 s
+0.1020 0.1020 0.1020 srgb
+190.87 526.15 (Mato Grosso) .5 0 t
+143.57 520.77 238.17 537.98 cl
+143.57 520.77 238.17 537.98 cl
+0.00 0.00 708.66 850.39 cl
+243.65 520.77 338.25 537.98 cl
+243.65 520.77 338.25 537.98 cl
+/bg { 0.8510 0.8510 0.8510 srgb } def
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+1 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+243.65 520.77 94.60 17.21 r p3
+/Font1 findfont 9 s
+0.1020 0.1020 0.1020 srgb
+290.95 526.15 (Goiás) .5 0 t
+243.65 520.77 338.25 537.98 cl
+243.65 520.77 338.25 537.98 cl
+0.00 0.00 708.66 850.39 cl
+343.73 520.77 438.33 537.98 cl
+343.73 520.77 438.33 537.98 cl
+/bg { 0.8510 0.8510 0.8510 srgb } def
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+1 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+343.73 520.77 94.60 17.21 r p3
+/Font1 findfont 9 s
+0.1020 0.1020 0.1020 srgb
+391.03 526.15 (Bahia) .5 0 t
+343.73 520.77 438.33 537.98 cl
+343.73 520.77 438.33 537.98 cl
+0.00 0.00 708.66 850.39 cl
+443.81 520.77 538.41 537.98 cl
+443.81 520.77 538.41 537.98 cl
+/bg { 0.8510 0.8510 0.8510 srgb } def
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+1 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+443.81 520.77 94.60 17.21 r p3
+/Font1 findfont 9 s
+0.1020 0.1020 0.1020 srgb
+465.60 526.15 (P) 0 ta
+-0.450 (er) tb
+0.225 (namb) tb
+-0.180 (uco) tb gr
+443.81 520.77 538.41 537.98 cl
+443.81 520.77 538.41 537.98 cl
+0.00 0.00 708.66 850.39 cl
+543.89 520.77 638.49 537.98 cl
+543.89 520.77 638.49 537.98 cl
+/bg { 0.8510 0.8510 0.8510 srgb } def
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+1 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+543.89 520.77 94.60 17.21 r p3
+/Font1 findfont 9 s
+0.1020 0.1020 0.1020 srgb
+591.19 526.15 (Alagoas) .5 0 t
+543.89 520.77 638.49 537.98 cl
+543.89 520.77 638.49 537.98 cl
+0.00 0.00 708.66 850.39 cl
+43.48 623.08 138.09 640.29 cl
+43.48 623.08 138.09 640.29 cl
+/bg { 0.8510 0.8510 0.8510 srgb } def
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+1 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+43.48 623.08 94.60 17.21 r p3
+/Font1 findfont 9 s
+0.1020 0.1020 0.1020 srgb
+90.79 628.46 (Acre) .5 0 t
+43.48 623.08 138.09 640.29 cl
+43.48 623.08 138.09 640.29 cl
+0.00 0.00 708.66 850.39 cl
+143.57 623.08 238.17 640.29 cl
+143.57 623.08 238.17 640.29 cl
+/bg { 0.8510 0.8510 0.8510 srgb } def
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+1 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+143.57 623.08 94.60 17.21 r p3
+/Font1 findfont 9 s
+0.1020 0.1020 0.1020 srgb
+190.87 628.46 (Rondônia) .5 0 t
+143.57 623.08 238.17 640.29 cl
+143.57 623.08 238.17 640.29 cl
+0.00 0.00 708.66 850.39 cl
+243.65 623.08 338.25 640.29 cl
+243.65 623.08 338.25 640.29 cl
+/bg { 0.8510 0.8510 0.8510 srgb } def
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+1 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+243.65 623.08 94.60 17.21 r p3
+/Font1 findfont 9 s
+0.1020 0.1020 0.1020 srgb
+271.44 628.46 (T) 0 ta
+-1.080 (ocantins) tb gr
+243.65 623.08 338.25 640.29 cl
+243.65 623.08 338.25 640.29 cl
+0.00 0.00 708.66 850.39 cl
+343.73 623.08 438.33 640.29 cl
+343.73 623.08 438.33 640.29 cl
+/bg { 0.8510 0.8510 0.8510 srgb } def
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+1 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+343.73 623.08 94.60 17.21 r p3
+/Font1 findfont 9 s
+0.1020 0.1020 0.1020 srgb
+391.03 628.46 (Piauí) .5 0 t
+343.73 623.08 438.33 640.29 cl
+343.73 623.08 438.33 640.29 cl
+0.00 0.00 708.66 850.39 cl
+443.81 623.08 538.41 640.29 cl
+443.81 623.08 538.41 640.29 cl
+/bg { 0.8510 0.8510 0.8510 srgb } def
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+1 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+443.81 623.08 94.60 17.21 r p3
+/Font1 findfont 9 s
+0.1020 0.1020 0.1020 srgb
+475.35 628.46 (P) 0 ta
+-0.360 (ar) tb
+-0.090 (aíba) tb gr
+443.81 623.08 538.41 640.29 cl
+443.81 623.08 538.41 640.29 cl
+0.00 0.00 708.66 850.39 cl
+543.89 623.08 638.49 640.29 cl
+543.89 623.08 638.49 640.29 cl
+/bg { 0.8510 0.8510 0.8510 srgb } def
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+1 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+543.89 623.08 94.60 17.21 r p3
+/Font1 findfont 9 s
+0.1020 0.1020 0.1020 srgb
+549.67 628.46 (Rio Gr) 0 ta
+-0.090 (ande do Nor) tb
+0.360 (te) tb gr
+543.89 623.08 638.49 640.29 cl
+543.89 623.08 638.49 640.29 cl
+0.00 0.00 708.66 850.39 cl
+143.57 725.39 238.17 742.60 cl
+143.57 725.39 238.17 742.60 cl
+/bg { 0.8510 0.8510 0.8510 srgb } def
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+1 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+143.57 725.39 94.60 17.21 r p3
+/Font1 findfont 9 s
+0.1020 0.1020 0.1020 srgb
+169.61 730.77 (Amaz) 0 ta
+-0.135 (onas) tb gr
+143.57 725.39 238.17 742.60 cl
+143.57 725.39 238.17 742.60 cl
+0.00 0.00 708.66 850.39 cl
+243.65 725.39 338.25 742.60 cl
+243.65 725.39 338.25 742.60 cl
+/bg { 0.8510 0.8510 0.8510 srgb } def
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+1 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+243.65 725.39 94.60 17.21 r p3
+/Font1 findfont 9 s
+0.1020 0.1020 0.1020 srgb
+281.44 730.77 (P) 0 ta
+-0.360 (ar) tb
+-0.090 (á) tb gr
+243.65 725.39 338.25 742.60 cl
+243.65 725.39 338.25 742.60 cl
+0.00 0.00 708.66 850.39 cl
+343.73 725.39 438.33 742.60 cl
+343.73 725.39 438.33 742.60 cl
+/bg { 0.8510 0.8510 0.8510 srgb } def
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+1 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+343.73 725.39 94.60 17.21 r p3
+/Font1 findfont 9 s
+0.1020 0.1020 0.1020 srgb
+370.77 730.77 (Mar) 0 ta
+-0.090 (anhão) tb gr
+343.73 725.39 438.33 742.60 cl
+343.73 725.39 438.33 742.60 cl
+0.00 0.00 708.66 850.39 cl
+443.81 725.39 538.41 742.60 cl
+443.81 725.39 538.41 742.60 cl
+/bg { 0.8510 0.8510 0.8510 srgb } def
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+1 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+443.81 725.39 94.60 17.21 r p3
+/Font1 findfont 9 s
+0.1020 0.1020 0.1020 srgb
+478.85 730.77 (Cear) 0 ta
+-0.090 (á) tb gr
+443.81 725.39 538.41 742.60 cl
+443.81 725.39 538.41 742.60 cl
+0.00 0.00 708.66 850.39 cl
+143.57 827.71 238.17 844.91 cl
+143.57 827.71 238.17 844.91 cl
+/bg { 0.8510 0.8510 0.8510 srgb } def
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+1 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+143.57 827.71 94.60 17.21 r p3
+/Font1 findfont 9 s
+0.1020 0.1020 0.1020 srgb
+173.86 833.08 (Ror) 0 ta
+-0.090 (aima) tb gr
+143.57 827.71 238.17 844.91 cl
+143.57 827.71 238.17 844.91 cl
+0.00 0.00 708.66 850.39 cl
+243.65 827.71 338.25 844.91 cl
+243.65 827.71 338.25 844.91 cl
+/bg { 0.8510 0.8510 0.8510 srgb } def
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+1 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+243.65 827.71 94.60 17.21 r p3
+/Font1 findfont 9 s
+0.1020 0.1020 0.1020 srgb
+290.95 833.08 (Amapá) .5 0 t
+243.65 827.71 338.25 844.91 cl
+243.65 827.71 338.25 844.91 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+51.37 540.72 m
+0 2.74 l
+o
+np
+72.87 540.72 m
+0 2.74 l
+o
+np
+94.37 540.72 m
+0 2.74 l
+o
+np
+115.87 540.72 m
+0 2.74 l
+o
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+/Font1 findfont 9 s
+0.3020 0.3020 0.3020 srgb
+44.11 532.07 (J) 0 ta
+-0.180 (an) tb gr
+72.87 532.07 (Apr) .5 0 t
+88.62 532.07 (J) 0 ta
+-0.180 (ul) tb gr
+115.87 532.07 (Oct) .5 0 t
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+151.45 336.10 m
+0 2.74 l
+o
+np
+172.95 336.10 m
+0 2.74 l
+o
+np
+194.45 336.10 m
+0 2.74 l
+o
+np
+215.95 336.10 m
+0 2.74 l
+o
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+/Font1 findfont 9 s
+0.3020 0.3020 0.3020 srgb
+144.19 327.45 (J) 0 ta
+-0.180 (an) tb gr
+172.95 327.45 (Apr) .5 0 t
+188.70 327.45 (J) 0 ta
+-0.180 (ul) tb gr
+215.95 327.45 (Oct) .5 0 t
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+251.53 29.17 m
+0 2.74 l
+o
+np
+273.03 29.17 m
+0 2.74 l
+o
+np
+294.53 29.17 m
+0 2.74 l
+o
+np
+316.03 29.17 m
+0 2.74 l
+o
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+/Font1 findfont 9 s
+0.3020 0.3020 0.3020 srgb
+244.28 20.52 (J) 0 ta
+-0.180 (an) tb gr
+273.03 20.52 (Apr) .5 0 t
+288.78 20.52 (J) 0 ta
+-0.180 (ul) tb gr
+316.03 20.52 (Oct) .5 0 t
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+351.61 131.48 m
+0 2.74 l
+o
+np
+373.11 131.48 m
+0 2.74 l
+o
+np
+394.61 131.48 m
+0 2.74 l
+o
+np
+416.11 131.48 m
+0 2.74 l
+o
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+/Font1 findfont 9 s
+0.3020 0.3020 0.3020 srgb
+344.36 122.83 (J) 0 ta
+-0.180 (an) tb gr
+373.11 122.83 (Apr) .5 0 t
+388.86 122.83 (J) 0 ta
+-0.180 (ul) tb gr
+416.11 122.83 (Oct) .5 0 t
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+451.69 233.79 m
+0 2.74 l
+o
+np
+473.19 233.79 m
+0 2.74 l
+o
+np
+494.69 233.79 m
+0 2.74 l
+o
+np
+516.19 233.79 m
+0 2.74 l
+o
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+/Font1 findfont 9 s
+0.3020 0.3020 0.3020 srgb
+444.44 225.14 (J) 0 ta
+-0.180 (an) tb gr
+473.19 225.14 (Apr) .5 0 t
+488.94 225.14 (J) 0 ta
+-0.180 (ul) tb gr
+516.19 225.14 (Oct) .5 0 t
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+551.77 438.41 m
+0 2.74 l
+o
+np
+573.27 438.41 m
+0 2.74 l
+o
+np
+594.77 438.41 m
+0 2.74 l
+o
+np
+616.27 438.41 m
+0 2.74 l
+o
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+/Font1 findfont 9 s
+0.3020 0.3020 0.3020 srgb
+544.52 429.76 (J) 0 ta
+-0.180 (an) tb gr
+573.27 429.76 (Apr) .5 0 t
+589.02 429.76 (J) 0 ta
+-0.180 (ul) tb gr
+616.27 429.76 (Oct) .5 0 t
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+/Font1 findfont 9 s
+0.3020 0.3020 0.3020 srgb
+138.63 746.57 (2000) 1 0 t
+138.63 765.61 (2005) 1 0 t
+138.63 784.66 (2010) 1 0 t
+138.63 803.71 (2015) 1 0 t
+138.63 822.76 (2020) 1 0 t
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+140.83 749.80 m
+2.74 0 l
+o
+np
+140.83 768.85 m
+2.74 0 l
+o
+np
+140.83 787.89 m
+2.74 0 l
+o
+np
+140.83 806.94 m
+2.74 0 l
+o
+np
+140.83 825.99 m
+2.74 0 l
+o
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+/Font1 findfont 9 s
+0.3020 0.3020 0.3020 srgb
+138.63 644.26 (2000) 1 0 t
+138.63 663.30 (2005) 1 0 t
+138.63 682.35 (2010) 1 0 t
+138.63 701.40 (2015) 1 0 t
+138.63 720.45 (2020) 1 0 t
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+140.83 647.49 m
+2.74 0 l
+o
+np
+140.83 666.54 m
+2.74 0 l
+o
+np
+140.83 685.58 m
+2.74 0 l
+o
+np
+140.83 704.63 m
+2.74 0 l
+o
+np
+140.83 723.68 m
+2.74 0 l
+o
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+/Font1 findfont 9 s
+0.3020 0.3020 0.3020 srgb
+38.55 541.95 (2000) 1 0 t
+38.55 560.99 (2005) 1 0 t
+38.55 580.04 (2010) 1 0 t
+38.55 599.09 (2015) 1 0 t
+38.55 618.14 (2020) 1 0 t
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+40.74 545.18 m
+2.74 0 l
+o
+np
+40.74 564.23 m
+2.74 0 l
+o
+np
+40.74 583.27 m
+2.74 0 l
+o
+np
+40.74 602.32 m
+2.74 0 l
+o
+np
+40.74 621.37 m
+2.74 0 l
+o
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+/Font1 findfont 9 s
+0.3020 0.3020 0.3020 srgb
+138.63 439.64 (2000) 1 0 t
+138.63 458.68 (2005) 1 0 t
+138.63 477.73 (2010) 1 0 t
+138.63 496.78 (2015) 1 0 t
+138.63 515.83 (2020) 1 0 t
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+140.83 442.87 m
+2.74 0 l
+o
+np
+140.83 461.91 m
+2.74 0 l
+o
+np
+140.83 480.96 m
+2.74 0 l
+o
+np
+140.83 500.01 m
+2.74 0 l
+o
+np
+140.83 519.06 m
+2.74 0 l
+o
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+/Font1 findfont 9 s
+0.3020 0.3020 0.3020 srgb
+138.63 337.33 (2000) 1 0 t
+138.63 356.37 (2005) 1 0 t
+138.63 375.42 (2010) 1 0 t
+138.63 394.47 (2015) 1 0 t
+138.63 413.52 (2020) 1 0 t
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+140.83 340.56 m
+2.74 0 l
+o
+np
+140.83 359.60 m
+2.74 0 l
+o
+np
+140.83 378.65 m
+2.74 0 l
+o
+np
+140.83 397.70 m
+2.74 0 l
+o
+np
+140.83 416.75 m
+2.74 0 l
+o
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+/Font1 findfont 9 s
+0.3020 0.3020 0.3020 srgb
+238.71 235.01 (2000) 1 0 t
+238.71 254.06 (2005) 1 0 t
+238.71 273.11 (2010) 1 0 t
+238.71 292.16 (2015) 1 0 t
+238.71 311.21 (2020) 1 0 t
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+240.91 238.25 m
+2.74 0 l
+o
+np
+240.91 257.29 m
+2.74 0 l
+o
+np
+240.91 276.34 m
+2.74 0 l
+o
+np
+240.91 295.39 m
+2.74 0 l
+o
+np
+240.91 314.44 m
+2.74 0 l
+o
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+/Font1 findfont 9 s
+0.3020 0.3020 0.3020 srgb
+238.71 132.70 (2000) 1 0 t
+238.71 151.75 (2005) 1 0 t
+238.71 170.80 (2010) 1 0 t
+238.71 189.85 (2015) 1 0 t
+238.71 208.90 (2020) 1 0 t
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+240.91 135.94 m
+2.74 0 l
+o
+np
+240.91 154.98 m
+2.74 0 l
+o
+np
+240.91 174.03 m
+2.74 0 l
+o
+np
+240.91 193.08 m
+2.74 0 l
+o
+np
+240.91 212.13 m
+2.74 0 l
+o
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+/Font1 findfont 9 s
+0.3020 0.3020 0.3020 srgb
+238.71 30.39 (2000) 1 0 t
+238.71 49.44 (2005) 1 0 t
+238.71 68.49 (2010) 1 0 t
+238.71 87.54 (2015) 1 0 t
+238.71 106.59 (2020) 1 0 t
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.2000 0.2000 0.2000 srgb
+1.07 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+240.91 33.63 m
+2.74 0 l
+o
+np
+240.91 52.67 m
+2.74 0 l
+o
+np
+240.91 71.72 m
+2.74 0 l
+o
+np
+240.91 90.77 m
+2.74 0 l
+o
+np
+240.91 109.82 m
+2.74 0 l
+o
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+/Font1 findfont 11 s
+0 0 0 srgb
+340.99 7.90 (Month) .5 0 t
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+/Font1 findfont 11 s
+0 0 0 srgb
+13.38 418.19 (Y) 90 ta
+-1.540 (ear) tb gr
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+/bg { 1 1 1 srgb } def
+649.45 373.23 53.73 113.16 r p2
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+gsave
+654.93 378.71 translate
+17.28 86.40 scale
+8 dict dup begin
+  /ImageType 1 def
+  /Width 17 def
+  /Height 86 def
+  /BitsPerComponent 8 def
+  /Decode [0 1 0 1 0 1] def
+  /DataSource currentfile /ASCIIHexDecode filter def
+  /ImageMatrix [17 0 0 -86 0 86] def
+end
+image
+67001f67001f67001f67001f67001f67001f67001f67001f67001f67001f67001f67001f67001f67001f67001f67001f67001f6b00226b00226b00226b00226b00226b00226b00226b00226b00226b00226b00226b00226b00226b00226b00226b00226b00226f00256f00256f00256f00256f00256f00256f00256f00256f00256f00256f00256f00256f00256f00256f00256f00256f002574002874002874002874002874002874002874002874002874002874002874002874002874002874002874002874002874002878002b78002b78002b78002b78002b78002b78002b78002b78002b78002b78002b78002b78002b78002b78002b78002b78002b7d002f7d002f7d002f7d002f7d002f7d002f7d002f7d002f7d002f7d002f7d002f7d002f7d002f7d002f7d002f7d002f7d002f8100328100328100328100328100328100328100328100328100328100328100328100328100328100328100328100328100328600368600368600368600368600368600368600368600368600368600368600368600368600368600368600368600368600368a00398a00398a00398a00398a00398a00398a00398a00398a00398a00398a00398a00398a00398a00398a00398a00398a00398f003d8f003d8f003d8f003d8f003d8f003d8f003d8f003d8f003d8f003d8f003d8f003d8f003d8f003d8f003d8f003d8f003d9400409400409400409400409400409400409400409400409400409400409400409400409400409400409400409400409400409900439900439900439900439900439900439900439900439900439900439900439900439900439900439900439900439900439e01459e01459e01459e01459e01459e01459e01459e01459e01459e01459e01459e01459e01459e01459e01459e01459e0145a30347a30347a30347a30347a30347a30347a30347a30347a30347a30347a30347a30347a30347a30347a30347a30347a30347a70448a70448a70448a70448a70448a70448a70448a70448a70448a70448a70448a70448a70448a70448a70448a70448a70448ad064aad064aad064aad064aad064aad064aad064aad064aad064aad064aad064aad064aad064aad064aad064aad064aad064ab2074cb2074cb2074cb2074cb2074cb2074cb2074cb2074cb2074cb2074cb2074cb2074cb2074cb2074cb2074cb2074cb2074cb70a4eb70a4eb70a4eb70a4eb70a4eb70a4eb70a4eb70a4eb70a4eb70a4eb70a4eb70a4eb70a4eb70a4eb70a4eb70a4eb70a4ebc0b4fbc0b4fbc0b4fbc0b4fbc0b4fbc0b4fbc0b4fbc0b4fbc0b4fbc0b4fbc0b4fbc0b4fbc0b4fbc0b4fbc0b4fbc0b4fbc0b4fc10d51c10d51c10d51c10d51c10d51c10d51c10d51c10d51c10d51c10d51c10d51c10d51c10d51c10d51c10d51c10d51c10d51c60f53c60f53c60f53c60f53c60f53c60f53c60f53c60f53c60f53c60f53c60f53c60f53c60f53c60f53c60f53c60f53c60f53cb1155cb1155cb1155cb1155cb1155cb1155cb1155cb1155cb1155cb1155cb1155cb1155cb1155cb1155cb1155cb1155cb1155cf1358cf1358cf1358cf1358cf1358cf1358cf1358cf1358cf1358cf1358cf1358cf1358cf1358cf1358cf1358cf1358cf1358d2165dd2165dd2165dd2165dd2165dd2165dd2165dd2165dd2165dd2165dd2165dd2165dd2165dd2165dd2165dd2165dd2165dd41861d41861d41861d41861d41861d41861d41861d41861d41861d41861d41861d41861d41861d41861d41861d41861d41861d61a66d61a66d61a66d61a66d61a66d61a66d61a66d61a66d61a66d61a66d61a66d61a66d61a66d61a66d61a66d61a66d61a66d91c6bd91c6bd91c6bd91c6bd91c6bd91c6bd91c6bd91c6bd91c6bd91c6bd91c6bd91c6bd91c6bd91c6bd91c6bd91c6bd91c6bdb1f70db1f70db1f70db1f70db1f70db1f70db1f70db1f70db1f70db1f70db1f70db1f70db1f70db1f70db1f70db1f70db1f70dd2075dd2075dd2075dd2075dd2075dd2075dd2075dd2075dd2075dd2075dd2075dd2075dd2075dd2075dd2075dd2075dd2075e0237ae0237ae0237ae0237ae0237ae0237ae0237ae0237ae0237ae0237ae0237ae0237ae0237ae0237ae0237ae0237ae0237ae2247ee2247ee2247ee2247ee2247ee2247ee2247ee2247ee2247ee2247ee2247ee2247ee2247ee2247ee2247ee2247ee2247ee42784e42784e42784e42784e42784e42784e42784e42784e42784e42784e42784e42784e42784e42784e42784e42784e42784e62888e62888e62888e62888e62888e62888e62888e62888e62888e62888e62888e62888e62888e62888e62888e62888e62888e72f8de72f8de72f8de72f8de72f8de72f8de72f8de72f8de72f8de72f8de72f8de72f8de72f8de72f8de72f8de72f8de72f8de63690e63690e63690e63690e63690e63690e63690e63690e63690e63690e63690e63690e63690e63690e63690e63690e63690e53d94e53d94e53d94e53d94e53d94e53d94e53d94e53d94e53d94e53d94e53d94e53d94e53d94e53d94e53d94e53d94e53d94e54397e54397e54397e54397e54397e54397e54397e54397e54397e54397e54397e54397e54397e54397e54397e54397e54397e4499be4499be4499be4499be4499be4499be4499be4499be4499be4499be4499be4499be4499be4499be4499be4499be4499be44e9ee44e9ee44e9ee44e9ee44e9ee44e9ee44e9ee44e9ee44e9ee44e9ee44e9ee44e9ee44e9ee44e9ee44e9ee44e9ee44e9ee353a2e353a2e353a2e353a2e353a2e353a2e353a2e353a2e353a2e353a2e353a2e353a2e353a2e353a2e353a2e353a2e353a2e258a5e258a5e258a5e258a5e258a5e258a5e258a5e258a5e258a5e258a5e258a5e258a5e258a5e258a5e258a5e258a5e258a5e15da9e15da9e15da9e15da9e15da9e15da9e15da9e15da9e15da9e15da9e15da9e15da9e15da9e15da9e15da9e15da9e15da9e061ace061ace061ace061ace061ace061ace061ace061ace061ace061ace061ace061ace061ace061ace061ace061ace061acdf65b0df65b0df65b0df65b0df65b0df65b0df65b0df65b0df65b0df65b0df65b0df65b0df65b0df65b0df65b0df65b0df65b0dd6ab2dd6ab2dd6ab2dd6ab2dd6ab2dd6ab2dd6ab2dd6ab2dd6ab2dd6ab2dd6ab2dd6ab2dd6ab2dd6ab2dd6ab2dd6ab2dd6ab2dc6fb4dc6fb4dc6fb4dc6fb4dc6fb4dc6fb4dc6fb4dc6fb4dc6fb4dc6fb4dc6fb4dc6fb4dc6fb4dc6fb4dc6fb4dc6fb4dc6fb4da74b6da74b6da74b6da74b6da74b6da74b6da74b6da74b6da74b6da74b6da74b6da74b6da74b6da74b6da74b6da74b6da74b6d878b8d878b8d878b8d878b8d878b8d878b8d878b8d878b8d878b8d878b8d878b8d878b8d878b8d878b8d878b8d878b8d878b8d67dbbd67dbbd67dbbd67dbbd67dbbd67dbbd67dbbd67dbbd67dbbd67dbbd67dbbd67dbbd67dbbd67dbbd67dbbd67dbbd67dbbd480bdd480bdd480bdd480bdd480bdd480bdd480bdd480bdd480bdd480bdd480bdd480bdd480bdd480bdd480bdd480bdd480bdd285bfd285bfd285bfd285bfd285bfd285bfd285bfd285bfd285bfd285bfd285bfd285bfd285bfd285bfd285bfd285bfd285bfd089c1d089c1d089c1d089c1d089c1d089c1d089c1d089c1d089c1d089c1d089c1d089c1d089c1d089c1d089c1d089c1d089c1cd8dc3cd8dc3cd8dc3cd8dc3cd8dc3cd8dc3cd8dc3cd8dc3cd8dc3cd8dc3cd8dc3cd8dc3cd8dc3cd8dc3cd8dc3cd8dc3cd8dc3cb91c5cb91c5cb91c5cb91c5cb91c5cb91c5cb91c5cb91c5cb91c5cb91c5cb91c5cb91c5cb91c5cb91c5cb91c5cb91c5cb91c5c995c8c995c8c995c8c995c8c995c8c995c8c995c8c995c8c995c8c995c8c995c8c995c8c995c8c995c8c995c8c995c8c995c8ca98c9ca98c9ca98c9ca98c9ca98c9ca98c9ca98c9ca98c9ca98c9ca98c9ca98c9ca98c9ca98c9ca98c9ca98c9ca98c9ca98c9cc9ccbcc9ccbcc9ccbcc9ccbcc9ccbcc9ccbcc9ccbcc9ccbcc9ccbcc9ccbcc9ccbcc9ccbcc9ccbcc9ccbcc9ccbcc9ccbcc9ccbcc9fcdcc9fcdcc9fcdcc9fcdcc9fcdcc9fcdcc9fcdcc9fcdcc9fcdcc9fcdcc9fcdcc9fcdcc9fcdcc9fcdcc9fcdcc9fcdcc9fcdcea3cfcea3cfcea3cfcea3cfcea3cfcea3cfcea3cfcea3cfcea3cfcea3cfcea3cfcea3cfcea3cfcea3cfcea3cfcea3cfcea3cfcfa6d0cfa6d0cfa6d0cfa6d0cfa6d0cfa6d0cfa6d0cfa6d0cfa6d0cfa6d0cfa6d0cfa6d0cfa6d0cfa6d0cfa6d0cfa6d0cfa6d0d0aad2d0aad2d0aad2d0aad2d0aad2d0aad2d0aad2d0aad2d0aad2d0aad2d0aad2d0aad2d0aad2d0aad2d0aad2d0aad2d0aad2d1add4d1add4d1add4d1add4d1add4d1add4d1add4d1add4d1add4d1add4d1add4d1add4d1add4d1add4d1add4d1add4d1add4d2b1d6d2b1d6d2b1d6d2b1d6d2b1d6d2b1d6d2b1d6d2b1d6d2b1d6d2b1d6d2b1d6d2b1d6d2b1d6d2b1d6d2b1d6d2b1d6d2b1d6d3b4d7d3b4d7d3b4d7d3b4d7d3b4d7d3b4d7d3b4d7d3b4d7d3b4d7d3b4d7d3b4d7d3b4d7d3b4d7d3b4d7d3b4d7d3b4d7d3b4d7d4b8d9d4b8d9d4b8d9d4b8d9d4b8d9d4b8d9d4b8d9d4b8d9d4b8d9d4b8d9d4b8d9d4b8d9d4b8d9d4b8d9d4b8d9d4b8d9d4b8d9d5bbdbd5bbdbd5bbdbd5bbdbd5bbdbd5bbdbd5bbdbd5bbdbd5bbdbd5bbdbd5bbdbd5bbdbd5bbdbd5bbdbd5bbdbd5bbdbd5bbdbd7bfddd7bfddd7bfddd7bfddd7bfddd7bfddd7bfddd7bfddd7bfddd7bfddd7bfddd7bfddd7bfddd7bfddd7bfddd7bfddd7bfddd9c2dfd9c2dfd9c2dfd9c2dfd9c2dfd9c2dfd9c2dfd9c2dfd9c2dfd9c2dfd9c2dfd9c2dfd9c2dfd9c2dfd9c2dfd9c2dfd9c2dfdbc6e1dbc6e1dbc6e1dbc6e1dbc6e1dbc6e1dbc6e1dbc6e1dbc6e1dbc6e1dbc6e1dbc6e1dbc6e1dbc6e1dbc6e1dbc6e1dbc6e1dccae3dccae3dccae3dccae3dccae3dccae3dccae3dccae3dccae3dccae3dccae3dccae3dccae3dccae3dccae3dccae3dccae3decee5decee5decee5decee5decee5decee5decee5decee5decee5decee5decee5decee5decee5decee5decee5decee5decee5e0d1e7e0d1e7e0d1e7e0d1e7e0d1e7e0d1e7e0d1e7e0d1e7e0d1e7e0d1e7e0d1e7e0d1e7e0d1e7e0d1e7e0d1e7e0d1e7e0d1e7e2d5e9e2d5e9e2d5e9e2d5e9e2d5e9e2d5e9e2d5e9e2d5e9e2d5e9e2d5e9e2d5e9e2d5e9e2d5e9e2d5e9e2d5e9e2d5e9e2d5e9e3d9ebe3d9ebe3d9ebe3d9ebe3d9ebe3d9ebe3d9ebe3d9ebe3d9ebe3d9ebe3d9ebe3d9ebe3d9ebe3d9ebe3d9ebe3d9ebe3d9ebe5ddede5ddede5ddede5ddede5ddede5ddede5ddede5ddede5ddede5ddede5ddede5ddede5ddede5ddede5ddede5ddede5ddede7e0efe7e0efe7e0efe7e0efe7e0efe7e0efe7e0efe7e0efe7e0efe7e0efe7e0efe7e0efe7e0efe7e0efe7e0efe7e0efe7e0efe8e3f0e8e3f0e8e3f0e8e3f0e8e3f0e8e3f0e8e3f0e8e3f0e8e3f0e8e3f0e8e3f0e8e3f0e8e3f0e8e3f0e8e3f0e8e3f0e8e3f0eae4f1eae4f1eae4f1eae4f1eae4f1eae4f1eae4f1eae4f1eae4f1eae4f1eae4f1eae4f1eae4f1eae4f1eae4f1eae4f1eae4f1ebe6f2ebe6f2ebe6f2ebe6f2ebe6f2ebe6f2ebe6f2ebe6f2ebe6f2ebe6f2ebe6f2ebe6f2ebe6f2ebe6f2ebe6f2ebe6f2ebe6f2ede8f3ede8f3ede8f3ede8f3ede8f3ede8f3ede8f3ede8f3ede8f3ede8f3ede8f3ede8f3ede8f3ede8f3ede8f3ede8f3ede8f3eeeaf4eeeaf4eeeaf4eeeaf4eeeaf4eeeaf4eeeaf4eeeaf4eeeaf4eeeaf4eeeaf4eeeaf4eeeaf4eeeaf4eeeaf4eeeaf4eeeaf4f0ebf4f0ebf4f0ebf4f0ebf4f0ebf4f0ebf4f0ebf4f0ebf4f0ebf4f0ebf4f0ebf4f0ebf4f0ebf4f0ebf4f0ebf4f0ebf4f0ebf4f1edf6f1edf6f1edf6f1edf6f1edf6f1edf6f1edf6f1edf6f1edf6f1edf6f1edf6f1edf6f1edf6f1edf6f1edf6f1edf6f1edf6f3eff6f3eff6f3eff6f3eff6f3eff6f3eff6f3eff6f3eff6f3eff6f3eff6f3eff6f3eff6f3eff6f3eff6f3eff6f3eff6f3eff6f4f1f7f4f1f7f4f1f7f4f1f7f4f1f7f4f1f7f4f1f7f4f1f7f4f1f7f4f1f7f4f1f7f4f1f7f4f1f7f4f1f7f4f1f7f4f1f7f4f1f7f6f2f8f6f2f8f6f2f8f6f2f8f6f2f8f6f2f8f6f2f8f6f2f8f6f2f8f6f2f8f6f2f8f6f2f8f6f2f8f6f2f8f6f2f8f6f2f8f6f2f8>
+grestore
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+/Font1 findfont 9 s
+0 0 0 srgb
+677.69 375.62 (0) 0 0 t
+677.69 404.96 (10) 0 0 t
+677.69 432.09 (100) 0 0 t
+677.69 445.46 (300) 0 0 t
+677.69 460.16 (1000) 0 0 t
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+/Font1 findfont 11 s
+0 0 0 srgb
+654.93 471.80 (DIR) 0 0 t
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+1 1 1 srgb
+0.38 setlinewidth
+[] 0 setdash
+0 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+654.93 378.85 m
+3.45 0 l
+o
+np
+654.93 408.19 m
+3.45 0 l
+o
+np
+654.93 435.32 m
+3.45 0 l
+o
+np
+654.93 448.69 m
+3.45 0 l
+o
+np
+654.93 463.39 m
+3.45 0 l
+o
+np
+668.75 378.85 m
+3.46 0 l
+o
+np
+668.75 408.19 m
+3.46 0 l
+o
+np
+668.75 435.32 m
+3.46 0 l
+o
+np
+668.75 448.69 m
+3.46 0 l
+o
+np
+668.75 463.39 m
+3.46 0 l
+o
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+0.00 0.00 708.66 850.39 cl
+ep
+%%Trailer
+%%Pages: 1
+%%EOF

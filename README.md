@@ -1,6 +1,8 @@
-# hydromet_dengue
+# Bayesian spatio-temporal modelling of environmental risks for dengue in Brazil
 
-Data and `R` code to support Lowe *et al.*, (2021). Combined effects of hydrometeorological hazards and urbanisation on dengue risk in Brazil: a spatiotemporal modelling study. *The Lancet Planetary Health* (https://doi.org/10.1016/S2542-5196(20)30292-8). 
+Data and `R` code to support:
+
+Lowe R, Lee SA, O'Reilly KM, Brady OJ, Bastos L, Carrasco-Escobar G, de Castro Catao R, Colon-Gonzalez FJ, Barcellos C, Carvalho MS, Blangiardo M, Rue H, Gasparrini A. Combined effects of hydrometeorological hazards and urbanisation on dengue risk in Brazil: a spatiotemporal modelling study. *The Lancet Planetary Health*. 2021;5(4):e209-e219. (https://doi.org/10.1016/S2542-5196(20)30292-8)
 
 To cite this repo:
 
